@@ -17,10 +17,10 @@
     "ohmyfetch": "^0.1.5",
     "parcel": "^2.0.0-nightly.511",
     "parcel-bundler": "^1.12.4",
-    "postcss": "^7",
+    "postcss": "^8",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "resolutions": {
-    "postcss": "^7"
+    "postcss": "^8"
   }
 }
