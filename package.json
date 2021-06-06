@@ -12,7 +12,7 @@
     "execa": "^5.0.0",
     "http-proxy": "^1.18.1",
     "http-proxy-middleware": "^1.0.6",
-    "jiti": "^0.1.19",
+    "jiti": "^1.10.1",
     "listhen": "^0.1.2",
     "ohmyfetch": "^0.1.5",
     "parcel": "^2.0.0-nightly.511",
