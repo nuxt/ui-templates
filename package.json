@@ -8,7 +8,7 @@
     "@nuxt/h2": "^0.2.0",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "autoprefixer": "^9",
-    "edge.js": "^1.1.4",
+    "edge.js": "^5.2.1",
     "execa": "^5.0.0",
     "http-proxy": "^1.18.1",
     "http-proxy-middleware": "^1.0.6",
