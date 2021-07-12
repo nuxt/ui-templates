@@ -1,21 +1,20 @@
-import { resolve, join } from 'path'
+import { basename, resolve, join } from 'path'
 import { promises as fsp } from 'fs'
+import glob from 'globby'
 import mockData from '../data/messages.json'
 
-const r = (...path) => resolve(join(__dirname, '..', ...path))
+const r = (...path: string[]) => resolve(join(__dirname, '..', ...path))
 
 async function main () {
-  const htmlFiles = await fsp.readdir(r('dist/templates'))
-  for (const file of htmlFiles) {
-    console.log('Processing', file)
-    const { default: template } = await import(
-      `./dist/templates/${file}/index.html`
-    )
+  const templates = await glob(r('dist/templates/*.js'))
+  for (const file of templates) {
+    console.log('Processing', basename(file).replace('.js', ''))
+    const { template } = await import(file)
     const updated = template({
-      messages: mockData,
+      ...mockData,
       name: '{{ name }}' // TODO
     })
-    await fsp.writeFile(r('dist/templates', file, 'index.html'), updated)
+    await fsp.writeFile(file.replace('.js', '/index.html'), updated)
   }
 }
 
