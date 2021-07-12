@@ -1,6 +1,16 @@
 {
   "name": "@nuxt/design",
-  "private": true,
+  "license": "CC-BY-ND-4.0",
+  "version": "0.0.1",
+  "exports": {
+    "./dist/assets/*": "./dist/assets/*",
+    "./dist/icons/*": "./dist/icons/*",
+    "./dist/images/*": "./dist/images/*",
+    "./dist/templates/*": "./dist/templates/*.js"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -17,10 +27,12 @@
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^6.0.1",
     "@types/lodash.template": "^4.5.0",
+    "@types/html-minifier": "^4.0.1",
     "critters": "^0.0.10",
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
     "globby": "^11.0.4",
+    "html-minifier": "^4.0.0",
     "husky": "^7.0.1",
     "lint-staged": "^11.0.0",
     "lodash.template": "^4.5.0",
