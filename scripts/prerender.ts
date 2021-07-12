@@ -6,16 +6,16 @@ import messages from '../data/messages.json'
 
 const r = (...path) => resolve(join(__dirname, '..', ...path))
 
-async function main() {
+async function main () {
   const htmlFiles = await glob(r('dist/**/*.html'))
   for (const file of htmlFiles) {
-      console.log('Process', file)
-      const contents = await fsp.readFile(file, 'utf-8')
-      const updated = template(contents, { interpolate: /{{([\s\S]+?)}}/g })({
-        messages,
-        name: '{{ name }}' // TODO
-      })
-      await fsp.writeFile(file, updated)
+    console.log('Process', file)
+    const contents = await fsp.readFile(file, 'utf-8')
+    const updated = template(contents, { interpolate: /{{([\s\S]+?)}}/g })({
+      messages,
+      name: '{{ name }}' // TODO
+    })
+    await fsp.writeFile(file, updated)
   }
 }
 
