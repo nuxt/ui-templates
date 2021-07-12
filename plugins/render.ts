@@ -8,9 +8,9 @@ import htmlMinifier from 'html-minifier'
 
 const r = (...path: string[]) => resolve(join(__dirname, '..', ...path))
 
-export const CrittersPlugin = () => {
+export const RenderPlugin = () => {
   return <Plugin>{
-    name: 'critters',
+    name: 'render',
     enforce: 'post',
     async writeBundle () {
       const distDir = r('dist')

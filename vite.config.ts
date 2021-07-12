@@ -5,7 +5,7 @@ import { defineConfig } from 'vite'
 import WindiCSS from 'vite-plugin-windicss'
 
 import { DevRenderingPlugin } from './plugins/dev'
-import { CrittersPlugin } from './plugins/render'
+import { RenderPlugin } from './plugins/render'
 
 const r = (...path: string[]) => resolve(__dirname, ...path)
 
@@ -31,7 +31,7 @@ export default defineConfig({
       }
     }),
     DevRenderingPlugin(),
-    CrittersPlugin()
+    RenderPlugin()
   ],
   server: {
     fs: {
