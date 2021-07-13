@@ -55,6 +55,13 @@ export const RenderPlugin = () => {
           fsp.writeFile(
             file.replace('/index.html', '.mjs'),
             `export const template = ${compiled.toString()}`
+          ),
+          fsp.writeFile(
+            file.replace('/index.html', '.d.ts'),
+            [
+              'declare const template: (data: Record<string, any>) => string',
+              'export { template }'
+            ].join('\n')
           )
         ])
       }
