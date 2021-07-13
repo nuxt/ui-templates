@@ -47,10 +47,16 @@ export const RenderPlugin = () => {
           variable: 'messages'
         })
 
-        await fsp.writeFile(
-          file.replace('/index.html', '.js'),
-          `export const template = ${compiled.toString()}`
-        )
+        await Promise.all([
+          fsp.writeFile(
+            file.replace('/index.html', '.cjs'),
+            `module.exports.template = ${compiled.toString()}`
+          ),
+          fsp.writeFile(
+            file.replace('/index.html', '.mjs'),
+            `export const template = ${compiled.toString()}`
+          )
+        ])
       }
     }
   }

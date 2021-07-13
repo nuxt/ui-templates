@@ -6,7 +6,10 @@
     "./dist/assets/*": "./dist/assets/*",
     "./dist/icons/*": "./dist/icons/*",
     "./dist/images/*": "./dist/images/*",
-    "./dist/templates/*": "./dist/templates/*.js"
+    "./dist/templates/*": {
+      "require": "./dist/templates/*.cjs",
+      "import": "./dist/templates/*.mjs"
+    }
   },
   "files": [
     "dist"
