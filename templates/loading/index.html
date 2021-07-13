@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ messages.loading }} | {{ messages.name }}</title>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0"
+      name="viewport"
+    />
+    <meta http-equiv="refresh" content="{{ messages.retryAfter || 60 }}">
+    <script type="module" src="/styles.ts"></script>
+  </head>
+  <body
+    class="
+      font-sans
+      antialiased
+      bg-cloud-surface
+      dark:bg-sky-darker
+      text-sky-darkest
+      dark:text-sky-surface
+    "
+  >
+    <div class="min-h-screen md:flex">
+      <div class="flex items-center justify-center w-full md:w-1/2">
+        <div class="max-w-sm m-8">
+          <div class="text-5xl font-bold dark:text-white md:text-7xl">
+            {{ messages.loading_message }}
+          </div>
+          <div class="w-16 h-1 my-3 bg-green md:my-6"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
