@@ -4,8 +4,6 @@
   "version": "0.0.1",
   "exports": {
     "./assets/*": "./dist/assets/*",
-    "./icons/*": "./dist/icons/*",
-    "./images/*": "./dist/images/*",
     "./templates/*": {
       "require": "./dist/templates/*.cjs",
       "import": "./dist/templates/*.mjs"
