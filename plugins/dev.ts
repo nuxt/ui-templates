@@ -2,7 +2,7 @@ import { resolve, join } from 'path'
 import { promises as fsp } from 'fs'
 import type { Plugin } from 'vite'
 import template from 'lodash.template'
-import mockData from '../data/messages.json'
+import genericMessages from '../templates/messages.json'
 
 const r = (...path: string[]) => resolve(join(__dirname, '..', ...path))
 
@@ -20,10 +20,13 @@ export const DevRenderingPlugin = () => {
 
       const contents = await fsp.readFile(r(page, 'index.html'), 'utf-8')
 
+      const messages = JSON.parse(await fsp.readFile(r(page, 'messages.json'), 'utf-8'))
+
       return template(contents, {
-        interpolate: /{{([\s\S]+?)}}/g,
-        variable: 'messages'
-      })(mockData)
+        interpolate: /{{([\s\S]+?)}}/g
+      })({
+        messages: { ...genericMessages, ...messages }
+      })
     }
   }
 }

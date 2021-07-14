@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ messages.error_server }} | {{ messages.name }}</title>
+    <title>{{ messages.statusCode }} - {{ messages.statusMessage }} | {{ messages.appName }}</title>
     <meta charset="utf-8" />
     <meta
       content="width=device-width,initial-scale=1.0,minimum-scale=1.0"
@@ -26,7 +26,7 @@
           <!-- Vite overlay: https://github.com/vitejs/vite/blob/main/packages/vite/src/client/overlay.ts -->
           <!-- Webpack overlay: https://github.com/webpack-contrib/webpack-hot-middleware/blob/master/client-overlay.js -->
           <div class="text-5xl font-bold dark:text-white md:text-15xl">
-            {{ messages.error_server }}
+            {{ messages.statusMessage }}
           </div>
           <div class="w-16 h-1 my-3 bg-green md:my-6"></div>
           <p
@@ -39,7 +39,7 @@
               md:text-3xl
             "
           >
-            {{ messages.error_server_message }}
+            {{ messages.description }}
           </p>
         </div>
       </div>

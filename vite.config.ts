@@ -14,7 +14,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         ...Object.fromEntries(
-          readdirSync(r('templates')).map(dir => [
+          readdirSync(r('templates')).filter(dir => dir !== 'messages.json').map(dir => [
             dir,
             r('templates', dir, 'index.html')
           ])
