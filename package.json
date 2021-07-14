@@ -3,10 +3,10 @@
   "license": "CC-BY-ND-4.0",
   "version": "0.0.1",
   "exports": {
-    "./dist/assets/*": "./dist/assets/*",
-    "./dist/icons/*": "./dist/icons/*",
-    "./dist/images/*": "./dist/images/*",
-    "./dist/templates/*": {
+    "./assets/*": "./dist/assets/*",
+    "./icons/*": "./dist/icons/*",
+    "./images/*": "./dist/images/*",
+    "./templates/*": {
       "require": "./dist/templates/*.cjs",
       "import": "./dist/templates/*.mjs"
     }
