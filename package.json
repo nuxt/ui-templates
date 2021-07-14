@@ -12,7 +12,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist/assets",
+    "dist/templates"
   ],
   "scripts": {
     "dev": "vite",
