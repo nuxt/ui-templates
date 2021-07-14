@@ -25,7 +25,7 @@ export const RenderPlugin = () => {
         // TODO: allow other scripts (such as petite-vue)
         // Remove the null scripts that are created by `virtual:windi.css`
         if (file.includes('templates')) {
-          result = result.replace(/<script[^>]*>[\s\S]*?<\/script>/g, '')
+          result = result.replace(/<script [^>]*>[\s\S]*?<\/script>/g, '')
         }
 
         // We no longer need references to external CSS
