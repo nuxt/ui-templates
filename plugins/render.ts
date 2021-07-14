@@ -1,5 +1,5 @@
-import { resolve, join } from 'path'
 import { promises as fsp } from 'fs'
+import { resolve, join, dirname } from 'upath'
 import type { Plugin } from 'vite'
 import Critters from 'critters'
 import glob from 'globby'
@@ -15,55 +15,51 @@ export const RenderPlugin = () => {
     async writeBundle () {
       const distDir = r('dist')
       const critters = new Critters({ path: distDir })
-      const htmlFiles = await glob(r('dist/**/*.html'))
+      const htmlFiles = await glob(r('dist/templates/**/*.html'))
 
       for (const file of htmlFiles) {
+        // eslint-disable-next-line no-console
         console.log('Processing', file)
-        const html = await fsp.readFile(file, 'utf-8')
-        let result = await critters.process(html)
 
-        // TODO: allow other scripts (such as petite-vue)
-        // Remove the null scripts that are created by `virtual:windi.css`
-        if (file.includes('templates')) {
-          result = result.replace(/<script [^>]*>[\s\S]*?<\/script>/g, '')
-        }
+        // Read source template
+        let html = await fsp.readFile(file, 'utf-8')
 
+        // Apply criters to inline styles
+        html = await critters.process(html)
         // We no longer need references to external CSS
-        result = result.replace(/<link[^>]*>/g, '')
+        html = html.replace(/<link[^>]*>/g, '')
 
-        await fsp.writeFile(file, result)
-
-        // Other files do not need to be exported as JS
-        if (!file.includes('templates')) {
-          continue
+        // Remove the null scripts that are created by `virtual:windi.css`
+        // TODO: Remove empty assets from dist and keep the rest with CDN import transform
+        if (file.includes('templates')) {
+          html = html.replace(/<script [^>]*>[\s\S]*?<\/script>/g, '')
         }
 
-        result = htmlMinifier.minify(result, {
-          collapseWhitespace: true
-        })
+        // Minify HTML
+        html = htmlMinifier.minify(html, { collapseWhitespace: true })
 
-        const compiled = template(result, {
+        // Serialize into a js function
+        const jsTemplate = template(html, {
           interpolate: /{{([\s\S]+?)}}/g,
           variable: 'messages'
-        })
+        }).toString()
 
+        // Generate types
+        const types = [
+          'declare const template: (data: Record<string, any>) => string',
+          'export { template }'
+        ].join('\n')
+
+        // Write new template
         await Promise.all([
-          fsp.writeFile(
-            file.replace('/index.html', '.cjs'),
-            `module.exports.template = ${compiled.toString()}`
-          ),
-          fsp.writeFile(
-            file.replace('/index.html', '.mjs'),
-            `export const template = ${compiled.toString()}`
-          ),
-          fsp.writeFile(
-            file.replace('/index.html', '.d.ts'),
-            [
-              'declare const template: (data: Record<string, any>) => string',
-              'export { template }'
-            ].join('\n')
-          )
+          fsp.writeFile(file.replace('/index.html', '.cjs'), `module.exports.template = ${jsTemplate}`),
+          fsp.writeFile(file.replace('/index.html', '.mjs'), `export const template = ${jsTemplate}`),
+          fsp.writeFile(file.replace('/index.html', '.d.ts'), types)
         ])
+
+        // Remove original html file
+        await fsp.rm(file)
+        await fsp.rmdir(dirname(file))
       }
     }
   }
