@@ -79,10 +79,10 @@ module.exports = {
     }
   },
   shortcuts: {
-    'display-4': 'text-sky-darker text-3xl leading-8 font-bold dark:text-white',
+    'display-4': 'text-3xl leading-8 font-bold text-current',
     'body-base': 'text-sky-dark dark:text-cloud-light',
-    'body-xl-darker': 'font-semibold text-xl text-sky-darker font-medium',
+    'body-xl-darker': 'font-semibold text-xl font-medium',
     'body-xl-default': 'font-semibold text-xl text-sky dark:text-cloud-light font-medium',
-    card: 'bg-cloud-surface shadow p-6 relative text-cloud-lightest sm:rounded-lg dark:bg-sky-darker'
+    card: 'bg-cloud-surface shadow p-6 relative text-sky-darker dark:text-cloud-lightest sm:rounded-lg dark:bg-sky-darker'
   }
 }

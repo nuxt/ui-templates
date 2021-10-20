@@ -453,22 +453,22 @@
     "@typescript-eslint/types" "4.33.0"
     eslint-visitor-keys "^2.0.0"
 
-"@windicss/config@1.4.11":
-  version "1.4.11"
-  resolved "https://registry.yarnpkg.com/@windicss/config/-/config-1.4.11.tgz#3001fd74307329d80baf508edc6f6baca618ab96"
-  integrity sha512-fNq8bo0RMUDUyzmXfKBUjSQOn0D9WLgGmv71IbbkH7UH+2NUYwCL0mgjdtX1MzlFyUXk1O35XnXpee/bscH2Gw==
+"@windicss/config@1.4.12":
+  version "1.4.12"
+  resolved "https://registry.yarnpkg.com/@windicss/config/-/config-1.4.12.tgz#32842fe009b64176b004c83a93c5189066042c33"
+  integrity sha512-+ckfkRoWC8wia5o7iCyDmydiJEkjX6lVEb6a2QVPI9WQ9Mi7hqfgOoStijOsEn0wIz95FDiOfVe5aSb1V4jEtw==
   dependencies:
     debug "^4.3.2"
-    jiti "^1.12.7"
+    jiti "^1.12.9"
     windicss "^3.1.9"
 
-"@windicss/plugin-utils@1.4.11":
-  version "1.4.11"
-  resolved "https://registry.yarnpkg.com/@windicss/plugin-utils/-/plugin-utils-1.4.11.tgz#8719f4cc0be74d53a43f08b4a6e0d3977c8b6bd4"
-  integrity sha512-lMxHnMCSFS8Cbae4lftYVLHJJoQ0ytVQQ4d71QhRYWjz1e8Axr/pJKxDgrlOUYb9B7LJ74/3ggMjCK5/X8Hiaw==
+"@windicss/plugin-utils@1.4.12":
+  version "1.4.12"
+  resolved "https://registry.yarnpkg.com/@windicss/plugin-utils/-/plugin-utils-1.4.12.tgz#9929369018c8660ee2f218c47cfa4b83f5174c59"
+  integrity sha512-ixYflwELxEjHyh0B9HqTwDp1d3v5IWtUucVY84o41ZU53BkuRw1lKbNlLMqbrtbk8p8rAQxjuwWZkWxFYi77tQ==
   dependencies:
     "@antfu/utils" "^0.3.0"
-    "@windicss/config" "1.4.11"
+    "@windicss/config" "1.4.12"
     debug "^4.3.2"
     fast-glob "^3.2.7"
     magic-string "^0.25.7"
@@ -2034,10 +2034,10 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
 
-jiti@^1.12.7:
-  version "1.12.7"
-  resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.12.7.tgz#745074d5a6f88c29152b32a99f4a2de23bd22a3f"
-  integrity sha512-2v5iYsJp5l7iX6ettW/hD7A9qZtsib3gMBfxbQxASszzOpZ0dFZBZAUQGKKIQ780XGR3sGEp1L/8t1JyyPq5Fg==
+jiti@^1.12.9:
+  version "1.12.9"
+  resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.12.9.tgz#2ce45b265cfc8dc91ebd70a5204807cf915291bc"
+  integrity sha512-TdcJywkQtcwLxogc4rSMAi479G2eDPzfW0fLySks7TPhgZZ4s/tM6stnzayIh3gS/db3zExWJyUx4cNWrwAmoQ==
 
 js-tokens@^4.0.0:
   version "4.0.0"
@@ -3229,12 +3229,12 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vite-plugin-windicss@^1.4.11:
-  version "1.4.11"
-  resolved "https://registry.yarnpkg.com/vite-plugin-windicss/-/vite-plugin-windicss-1.4.11.tgz#7c6bb9322b2172e494f172a1f36f82cf15beba0f"
-  integrity sha512-0DQN6wM7hVppGN29STJnDg5NYsALTsF1E/FOIYUMxBQg5gCMmk/yAwl95rvf5PTlL7qzjyp7shpy9Sct4fNktQ==
+vite-plugin-windicss@1.4.12:
+  version "1.4.12"
+  resolved "https://registry.yarnpkg.com/vite-plugin-windicss/-/vite-plugin-windicss-1.4.12.tgz#a301fd554425042b5fdaec562bd11a5a0fcbf178"
+  integrity sha512-5YLT7e72z1vCTSmprU/KxtRg22ySN+H19Qxy67lbG3mEbq8YbheOlmVhbqNqSv2MjFVhFqu72Q1FkkjyWENyQQ==
   dependencies:
-    "@windicss/plugin-utils" "1.4.11"
+    "@windicss/plugin-utils" "1.4.12"
     chalk "^4.1.2"
     debug "^4.3.2"
     windicss "^3.1.9"
