@@ -73,5 +73,12 @@ module.exports = {
         black: '#001E26'
       }
     }
+  },
+  shortcuts: {
+    'display-4': 'text-sky-darker text-3xl leading-8 font-bold dark:text-white',
+    'body-base': 'text-sky-dark dark:text-cloud-light',
+    'body-xl-darker': 'font-semibold text-xl text-sky-darker font-medium',
+    'body-xl-default': 'font-semibold text-xl text-sky dark:text-cloud-light font-medium',
+    card: 'bg-cloud-surface shadow p-6 relative sm:rounded-lg dark:bg-sky-darker'
   }
 }

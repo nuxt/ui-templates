@@ -38,27 +38,27 @@
         </svg>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-        <div class="bg-cloud-surface dark:bg-sky-darker overflow-hidden shadow sm:rounded-lg p-6 relative">
-          <a href="https://v3.nuxtjs.org" target="_blank" rel="noopener" class="hover:underline text-sky-darker dark:text-white text-3xl leading-8 font-semibold">
+        <div class="card">
+          <div class="display-4 mb-2">
             {{ messages.documentation }}
-          </a>
-          <div class="mt-2 text-cloud-dark dark:text-cloud-light text-md mb-12">
+          </div>
+          <div class="body-base mb-12">
             {{ messages.readDocs }}<br/>
           </div>
           <div>
-            <div class="flex items-center text-xl mb-3">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-3">
+            <div class="flex items-center mb-3">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
                 <g opacity="0.9">
                   <path d="M6.66667 0L10.7081 7H2.62521L6.66667 0Z" fill="#00DC82"/>
                   <path d="M6.66665 14L2.62519 7L10.7081 7L6.66665 14Z" fill="#00DC82"/>
                 </g>
               </svg>
-              {{ messages.gettingStarted }}
+              <div class="body-xl-darker">{{ messages.gettingStarted }}</div>
             </div>
             <ul>
-              <li class="text-secondary dark:text-cloud-light text-xl mb-2">Usage</li>
-              <li class="text-secondary dark:text-cloud-light text-xl mb-2">Internals</li>
-              <li class="text-secondary dark:text-cloud-light text-xl mb-2">Api Reference</li>
+              <li class="body-xl-default mb-2">Usage</li>
+              <li class="body-xl-default mb-2">Internals</li>
+              <li class="body-xl-default mb-2">Api Reference</li>
             </ul>
           </div>
           <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute right-0 bottom-0">
@@ -73,11 +73,11 @@
           </svg>
         </div>
         <div class="grid grid-cols-1 gap-8">
-          <div class="bg-cloud-surface dark:bg-sky-darker overflow-hidden shadow sm:rounded-lg p-6 relative">
-            <a href="https://v3.nuxtjs.org" target="_blank" rel="noopener" class="hover:underline text-sky-darker dark:text-white text-3xl leading-8 font-semibold">
+          <div class="card">
+            <div class="display-4">
               Twitter
-            </a>
-            <div class="text-secondary dark:text-cloud-light text-xl mt-2">
+            </div>
+            <div class="body-xl-default mt-2">
               {{ messages.joinUs }}<br/>
             </div>
             <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute bottom-0 right-0">
@@ -91,11 +91,11 @@
               </defs>
             </svg>
           </div>
-          <div class="bg-cloud-surface dark:bg-sky-darker overflow-hidden shadow sm:rounded-lg p-6 relative">
-            <a href="https://v3.nuxtjs.org" target="_blank" rel="noopener" class="hover:underline text-sky-darker dark:text-white text-3xl leading-8 font-semibold">
+          <div class="card">
+            <div class="display-4">
               Github
-            </a>
-            <div class="text-secondary dark:text-cloud-light text-xl mt-2">
+            </div>
+            <div class="body-xl-default mt-2">
               {{ messages.joinUs }}<br/>
             </div>
             <svg width="80" height="87" viewBox="0 0 80 87" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute bottom-0 right-0">
@@ -109,11 +109,11 @@
               </defs>
             </svg>
           </div>
-          <div class="bg-cloud-surface dark:bg-sky-darker overflow-hidden shadow sm:rounded-lg p-6 relative">
-            <a href="https://v3.nuxtjs.org" target="_blank" rel="noopener" class="hover:underline text-sky-darker dark:text-white text-3xl leading-8 font-semibold">
+          <div class="card">
+            <div class="display-4">
               Discord
-            </a>
-            <div class="text-secondary dark:text-cloud-light text-xl mt-2">
+            </div>
+            <div class="body-xl-default mt-2">
               {{ messages.joinUs }}<br/>
             </div>
             <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute right-0 bottom-0">
@@ -129,10 +129,10 @@
           </div>
         </div>
       </div>
-      <div class="bg-cloud-surface dark:bg-sky-darker overflow-hidden shadow sm:rounded-lg p-6 flex flex-col">
-        <p class="mb-3">To remove this welcome page, you have 2 options :</p>
-        <button class="p-2 mb-3 bg-cloud-lightest self-start sm:rounded-lg">Create an <strong>app.vue</strong></button>
-        <button class="p-2 mb-3 bg-cloud-lightest self-start sm:rounded-lg">Create a <strong>pages/index.vue</strong></button>
+      <div class="card flex flex-col">
+        <p class="mb-3 body-base">To remove this welcome page, you have 2 options :</p>
+        <button class="p-2 mb-3 bg-cloud-lightest self-start sm:rounded-lg text-sky-dark">Create an <strong>app.vue</strong></button>
+        <button class="p-2 mb-3 bg-cloud-lightest self-start sm:rounded-lg text-sky-dark">Create a <strong>pages/index.vue</strong></button>
       </div>
     </div>
   </div>
