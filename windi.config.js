@@ -21,6 +21,10 @@ module.exports = {
         800: '#00633B',
         900: '#004227'
       },
+      'purple-surface': '#E8E6F0',
+      'purple-dark': '#D1D1E2',
+      'stone-surface': '#F6F6F6',
+      'stone-lightest': '#D4D4D4',
       'secondary-surface': '#E5F9FF',
       'secondary-lightest': '#B7E1ED',
       'secondary-lighter': '#95CDDE',
@@ -79,6 +83,6 @@ module.exports = {
     'body-base': 'text-sky-dark dark:text-cloud-light',
     'body-xl-darker': 'font-semibold text-xl text-sky-darker font-medium',
     'body-xl-default': 'font-semibold text-xl text-sky dark:text-cloud-light font-medium',
-    card: 'bg-cloud-surface shadow p-6 relative sm:rounded-lg dark:bg-sky-darker'
+    card: 'bg-cloud-surface shadow p-6 relative text-cloud-lightest sm:rounded-lg dark:bg-sky-darker'
   }
 }
