@@ -111,6 +111,6 @@ module.exports = {
     'display-4': 'text-3xl font-bold text-sky-darker dark:text-white',
     'body-xl-darker': 'font-semibold text-xl font-medium text-sky-darker dark:text-white',
     'body-xl-default': 'text-xl font-medium',
-    card: 'p-6 relative sm:rounded-lg bg-cloud-surface text-sky svg:text-cloud-lightest dark:svg:text-sky-dark dark:text-sky-light dark:bg-sky-darker'
+    card: 'p-4 relative rounded-xl bg-cloud-surface text-sky svg:text-cloud-lightest dark:svg:text-sky-dark dark:text-sky-light dark:bg-sky-darker'
   }
 }
