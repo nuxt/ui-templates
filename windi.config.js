@@ -4,6 +4,11 @@ module.exports = {
   purge: ['./src/**/*.html'],
   darkMode: 'media',
   theme: {
+    extend: {
+      fontFamily: {
+        sans: 'DM Sans, sans-serif'
+      }
+    },
     colors: {
       white: 'white',
       black: 'black',
@@ -66,6 +71,7 @@ module.exports = {
       gray: colors.gray,
       purple: colors.purple,
       sky: {
+        github: '#0B2126',
         surface: '#E5F9FF',
         lightest: '#B7E1ED',
         lighter: '#95CDDE',
@@ -75,14 +81,36 @@ module.exports = {
         darker: '#003543',
         darkest: '#012A35',
         black: '#001E26'
+      },
+      github: {
+        'hover-text': '#497A87',
+        'hover-svg': '#D4D4D4',
+        'hover-bg': '#F6F6F6',
+        'dark-hover-bg': '#0B2126',
+        'dark-hover-text': '#BCBCBC',
+        'dark-hover-svg': '#FEFFFF'
+      },
+      twitter: {
+        'hover-text': '#497A87',
+        'hover-svg': '#B7E1ED',
+        'hover-bg': '#E5F9FF',
+        'dark-hover-bg': '#175B6C',
+        'dark-hover-text': '#71A2B0'
+      },
+      discord: {
+        'hover-text': '#497A87',
+        'hover-svg': '#D1D1E2',
+        'hover-bg': '#E8E6F0',
+        'dark-hover-bg': '#58677D',
+        'dark-hover-text': '#9BA4B1',
+        'dark-hover-svg': '#A3B7D6'
       }
     }
   },
   shortcuts: {
-    'display-4': 'text-3xl leading-8 font-bold text-current',
-    'body-base': 'text-sky-dark dark:text-cloud-light',
-    'body-xl-darker': 'font-semibold text-xl font-medium',
-    'body-xl-default': 'font-semibold text-xl text-sky dark:text-cloud-light font-medium',
-    card: 'bg-cloud-surface shadow p-6 relative text-sky-darker dark:text-cloud-lightest sm:rounded-lg dark:bg-sky-darker'
+    'display-4': 'text-3xl font-bold text-sky-darker dark:text-white',
+    'body-xl-darker': 'font-semibold text-xl font-medium text-sky-darker dark:text-white',
+    'body-xl-default': 'text-xl font-medium',
+    card: 'p-6 relative sm:rounded-lg bg-cloud-surface text-sky svg:text-cloud-lightest dark:svg:text-sky-dark dark:text-sky-light dark:bg-sky-darker'
   }
 }
