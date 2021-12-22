@@ -1,16 +1,37 @@
-# Nuxt Design
+# 🎨 Nuxt UI
 
-Unified designs for the [Nuxt Framework](https://nuxtjs.org). This package is not intended to be used directly by end users.
+Unified UI and Design Kit for the Nuxt.
 
-## Development
+## 📦 Packages
 
-- Clone the repository
-- Install dependencies with `yarn install`
-- Start development server with `yarn dev`
-- Open `http://localhost:3000/` for a list of all the templates
+<table>
+<tbody>
+<tr>
+  <td>
+    <h2><a href="./packages/ui">UI Components</a></h2>
+    <p> UI kit for examples and internal tooling UI.</p>
+  </td>
+  <td>
+    <h2><a href="./packages/templates">UI Templates</a></h2>
+    <p>Pre-compiled html templates for internal pages.</p>
+  </td>
+  <td>
+    <h2><a href="./packages/assets">UI Assets</a></h2>
+    <p> Shared assets and resources.</p>
+  </td>
+</tr>
+</tbody>
+</table>
 
-To add a new template, simply create a new file: `./templates/<templateName>/index.html`.
+
+## 💻 Development
+
+- Clone repository
+- Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable` (use `npm i -g corepack` for Node.js < 16.10)
+- Install dependencies using `yarn install`
 
 # License
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Nuxt Design System</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Nuxt Project</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/nuxt/design" rel="dct:source">https://github.com/nuxt/design</a>.
+[MIT](./LICENSE).
+Design resources are published under [CC-BY-ND-4.0](http://creativecommons.org/licenses/by-nd/4.0/).
+
