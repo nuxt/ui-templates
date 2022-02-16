@@ -23,10 +23,10 @@ export const NuxtUIPreset: Preset<Theme> = {
   }),
   rules: [
     [/^n-(.*)$/, ([, body]: string[], { theme }: RuleContext<Theme>) => {
-      const { rgba } = parseColor(body, theme) || {}
-      if (rgba) {
+      const color = parseColor(body, theme)
+      if (color?.cssColor?.type === 'rgb' && color.cssColor.components) {
         return {
-          '--nui-c-context': `${rgba.join(',')}`
+          '--nui-c-context': `${color.cssColor.components.join(',')}`
         }
       }
     }],
