@@ -2,8 +2,7 @@
   <div class="relative p-10 n-bg-base">
     <div class="container w-full mx-auto flex flex-col gap-4">
       <NTip n="hover:yellow-600 dark:hover:yellow-500">
-        This library is heavily working in progress and does not serve as a
-        generic UI library (for now). It is not recommended to use it in
+        This library is heavily working in progress and does not serve as a generic UI library (for now). It is not recommended to use it in
         production.
       </NTip>
 
