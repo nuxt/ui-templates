@@ -85,9 +85,9 @@ export const RenderPlugin = () => {
           return `\${${r.slice(2, -2)}}`.replace(/messages\./g, 'props.')
         })
         const styleContent = Array.from(html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)).map(block => block[1])
-        const props = genObjectFromRawEntries(Object.entries(messages).map(([key, value]) => [key, {
-          type: 'String',
-          default: genString(value as string)
+        const props = genObjectFromRawEntries(Object.entries({ ...genericMessages, ...messages }).map(([key, value]) => [key, {
+          type: typeof value === 'string' ? 'String' : typeof value === 'number' ? 'Number' : typeof value === 'boolean' ? 'Boolean' : 'any',
+          default: JSON.stringify(value)
         }]))
         const vueCode = [
           '<script setup lang="ts">',
