@@ -3,6 +3,7 @@ import { resolve, join, dirname, basename } from 'upath'
 import type { Plugin } from 'vite'
 import Critters from 'critters'
 import template from 'lodash.template'
+import { genObjectFromRawEntries, genString } from 'knitwork'
 import htmlMinifier from 'html-minifier'
 import { camelCase } from 'scule'
 import genericMessages from '../templates/messages.json'
@@ -84,11 +85,14 @@ export const RenderPlugin = () => {
           return `\${${r.slice(2, -2)}}`.replace(/messages\./g, 'props.')
         })
         const styleContent = Array.from(html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)).map(block => block[1])
+        const props = genObjectFromRawEntries(Object.entries(messages).map(([key, value]) => [key, {
+          type: 'String',
+          default: genString(value as string)
+        }]))
         const vueCode = [
           '<script setup lang="ts">',
           title && '  import { useMeta } from \'#app\'',
-          `  import type { DefaultMessages } from './${basename(fileName.replace('/index.html', ''))}'`,
-          '  const props = defineProps<DefaultMessages>()',
+          `  const props = defineProps(${props})`,
           title && `  useMeta({ title: \`${title}\` })`,
           '</script>',
           '<template>',
