@@ -72,6 +72,32 @@ export const RenderPlugin = () => {
           'const _template = (messages) => _render({ messages: { ..._messages, ...messages } })'
         ].join('\n').trim()
 
+        const templateContent = html
+          .match(/<body.*?>([\s\S]*)<\/body>/)?.[0]
+          .replace(/(?<=<|<\/)body/g, 'div')
+          .replace(/<a href="([^"]+)"([^>]*)>([\s\S]*)<\/a>/g, '<NuxtLink to="$1"$2>$3</NuxtLink>')
+          .replace(/>{{\s*([\s\S]+?)\s*}}<\/[\w-]*>/g, ' v-html="$1" />')
+        // We are not matching <link> <script> and <meta> tags as these aren't used yet in nuxt/ui
+        // and should be taken care of wherever this SFC is used
+        const title = html.match(/<title.*?>([\s\S]*)<\/title>/)?.[1].replace(/{{([\s\S]+?)}}/g, (r) => {
+          return `\${${r.slice(2, -2)}}`.replace(/messages\./g, 'props.messages.')
+        })
+        const styleContent = Array.from(html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)).map(block => block[1])
+        const vueCode = [
+          '<script setup lang="ts">',
+          title && '  import { useMeta } from \'#app\'',
+          `  import type { DefaultMessages } from './${basename(fileName.replace('/index.html', ''))}'`,
+          '  const props = defineProps<{ messages: DefaultMessages }>()',
+          title && `  useMeta({ title: \`${title}\` })`,
+          '</script>',
+          '<template>',
+          templateContent,
+          '</template>',
+          '<style>',
+          ...styleContent,
+          '</style>'
+        ].filter(Boolean).join('\n').trim()
+
         // Generate types
         const types = [
           `export type DefaultMessages = Record<${Object.keys(messages).map(a => `"${a}"`).join(' | ')}, string | boolean | number >`,
@@ -88,6 +114,7 @@ export const RenderPlugin = () => {
 
         // Write new template
         await fsp.writeFile(fileName.replace('/index.html', '.mjs'), `${jsCode}\nexport const template = _template`)
+        await fsp.writeFile(fileName.replace('/index.html', '.vue'), vueCode)
         await fsp.writeFile(fileName.replace('/index.html', '.d.ts'), `${types}`)
 
         // Remove original html file
