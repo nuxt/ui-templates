@@ -2,6 +2,6 @@
   "statusCode": "500",
   "statusMessage": "Server error",
   "description": "An error occurred in the application and the page could not be served. If you are the application owner, check your server logs for details.",
-  "stack": "<pre><span class=\"stack\">at setup (file://./.nuxt/dist/server/server.mjs:9420:13)</span>\n<span class=\"stack\">at _sfc_main.setup (file://./.nuxt/dist/server/server.mjs:9555:23)</span>\n<span class=\"stack internal\">at callWithErrorHandling (/project/node_modules/@vue/runtime-core/dist/runtime-core.cjs.js:157:22)</span>\n<span class=\"stack internal\">at setupStatefulComponent (/project/node_modules/@vue/runtime-core/dist/runtime-core.cjs.js:6977:29)</span>\n<span class=\"stack internal\">at setupComponent (/project/node_modules/@vue/runtime-core/dist/runtime-core.cjs.js:6933:11)</span>\n<span class=\"stack internal\">at renderComponentVNode (/project/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js:198:17)</span>\n<span class=\"stack internal\">at Module.ssrRenderComponent (/project/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js:629:12)</span>\n<span class=\"stack\">at default (file://./.nuxt/dist/server/server.mjs:9274:37)</span>\n<span class=\"stack internal\">at Module.<anonymous> (/project/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js:958:13)</span>\n<span class=\"stack\">at Generator.next (<anonymous>)</span></pre>\n    "
+  "stack": ""
 
 }
