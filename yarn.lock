@@ -1601,7 +1601,7 @@ __metadata:
     "@unocss/preset-mini": ^0.27.6
     "@unocss/reset": ^0.27.6
     "@vueuse/core": ^7.7.1
-    "@vueuse/integrations": ^7.7.1
+    "@vueuse/integrations": ^8.0.0
     "@vueuse/nuxt": ^8.0.0
     focus-trap: ^6.7.3
     nuxt3: latest
@@ -2651,24 +2651,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:7.7.1, @vueuse/core@npm:^7.7.1":
-  version: 7.7.1
-  resolution: "@vueuse/core@npm:7.7.1"
-  dependencies:
-    "@vueuse/shared": 7.7.1
-    vue-demi: "*"
-  peerDependencies:
-    "@vue/composition-api": ^1.1.0
-    vue: ^2.6.0 || ^3.2.0
-  peerDependenciesMeta:
-    "@vue/composition-api":
-      optional: true
-    vue:
-      optional: true
-  checksum: 957ef988a07bced077a605f005a5138e5a88bf871b6748a0dc33ed90779b2ce9792640ddcf9df40e9ee344fe7a4dcd9ca52098d08a5b24bb7607c04080ea79e6
-  languageName: node
-  linkType: hard
-
 "@vueuse/core@npm:8.0.0":
   version: 8.0.0
   resolution: "@vueuse/core@npm:8.0.0"
@@ -2688,6 +2670,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vueuse/core@npm:^7.7.1":
+  version: 7.7.1
+  resolution: "@vueuse/core@npm:7.7.1"
+  dependencies:
+    "@vueuse/shared": 7.7.1
+    vue-demi: "*"
+  peerDependencies:
+    "@vue/composition-api": ^1.1.0
+    vue: ^2.6.0 || ^3.2.0
+  peerDependenciesMeta:
+    "@vue/composition-api":
+      optional: true
+    vue:
+      optional: true
+  checksum: 957ef988a07bced077a605f005a5138e5a88bf871b6748a0dc33ed90779b2ce9792640ddcf9df40e9ee344fe7a4dcd9ca52098d08a5b24bb7607c04080ea79e6
+  languageName: node
+  linkType: hard
+
 "@vueuse/head@npm:^0.7.5":
   version: 0.7.5
   resolution: "@vueuse/head@npm:0.7.5"
@@ -2697,15 +2697,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/integrations@npm:^7.7.1":
-  version: 7.7.1
-  resolution: "@vueuse/integrations@npm:7.7.1"
+"@vueuse/integrations@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "@vueuse/integrations@npm:8.0.0"
   dependencies:
-    "@vueuse/core": 7.7.1
-    "@vueuse/shared": 7.7.1
+    "@vueuse/core": 8.0.0
+    "@vueuse/shared": 8.0.0
     vue-demi: "*"
   peerDependencies:
     axios: "*"
+    change-case: "*"
     drauu: "*"
     focus-trap: "*"
     fuse.js: "*"
@@ -2730,7 +2731,7 @@ __metadata:
       optional: true
     universal-cookie:
       optional: true
-  checksum: 8312b84c0c0c8647aef2327928cf8c5c588a7f771d9a400e4c3cfa2435539be1bb579fbc0d2ddc1d3979005bd88eb7348653b3663b11b9e4f6eece2a87593a23
+  checksum: 2b4c151ea8777f26d2ea10d8a576e15caa479b7f9fa6a983e04c73fe9e0ff1791946b2f66f49d1baf94e2981c99a71602b313d3a74bab0910e2b6f7c1f1f0399
   languageName: node
   linkType: hard
 
