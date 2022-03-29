@@ -1,50 +1,107 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title>{{ messages.statusCode }} - {{ messages.statusMessage }} | {{ messages.appName }}</title>
-  <meta charset="utf-8" />
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0" name="viewport" />
-  <script type="module" src="/styles.ts"></script>
-</head>
-
-<body class="
-      font-sans
-      antialiased
-      bg-cloud-surface
-      dark:bg-sky-darker
-      text-sky-darkest
-      dark:text-sky-surface
-    ">
-  <div class="min-h-screen md:flex">
-    <div class="flex items-center justify-center w-full max-w-full">
-      <div class="max-w-full lg:max-w-10xl m-8 p-4">
-        <div class="md:max-w-sm text-5xl font-bold dark:text-white md:text-15xl">
-          {{ messages.statusCode }}
-        </div>
-        <div class="w-16 h-1 my-3 bg-primary md:my-6"></div>
-        <div class="
-          mb-8
-          text-2xl
-          font-light
-          leading-normal
-          dark:text-cloud-lighter
-          md:text-3xl
-          max-w-sm
-        ">
-          {{ messages.description }}
-        </div>
-      </div>
+  <head>
+    <title>{{ messages.statusCode }} - {{ messages.statusMessage }} | {{ messages.appName }}</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0" name="viewport" />
+    <script type="module" src="/styles.ts"></script>
+  </head>
+  <body class="font-sans antialiased bg-white px-10 pt-14 dark:bg-black text-black dark:text-white min-h-screen flex flex-col">
+    <div class="fixed -bottom-1/2 left-0 right-0 h-1/2 spotlight">
+      tetest
     </div>
-    <div class="
-          relative
-          w-full
-          pb-full
-          md:flex md:pb-0 md:min-h-screen md:w-1/2
-        ">
-      <img src="images/500.svg" class="object-cover">
-    </div>
-  </div>
-</body>
+    <p class="text-4xl font-light mb-16 leading-tight">
+      {{ messages.description }}
+    </p>
+    <h1 class="text-12xl font-medium mb-8">{{ messages.statusCode }}</h1>
 
+    <div class="bg-white rounded-t-md bg-black/10 dark:bg-white/10 flex-1 overflow-y-auto h-auto">
+        <p class="text-2xl font-light leading-tight z-10 p-8">
+          {{ messages.stack }}
+        </p>
+    </div>
+  </body>
 </html>
+
+<style>
+.spotlight {
+  z-index: -1;
+  background: linear-gradient(45deg,  #00DC82 0%, #36E4DA 50%, #0047E1 100%);
+  filter: blur(20vh);
+}
+
+.gradient-border {
+  position: relative;
+  background: transparent;
+  border-radius: 0.5rem;
+}
+
+.gradient-border:hover {
+  border: none;
+}
+
+.gradient-border:hover::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(97.62deg, #FF40BF 2.27%, #0047E1 36.85%, #1CD1C6 68.92%, #00BD6F 98.48%);
+  z-index: -1;
+  border-radius: 0.5rem;
+}
+
+.gradient-border:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(97.62deg, #FF40BF 2.27%, #0047E1 36.85%, #1CD1C6 68.92%, #00BD6F 98.48%);
+  z-index: -2;
+}
+
+@media (prefers-color-scheme: light) {
+  .gradient-border {
+    border: 2px solid black;
+  }
+  .gradient-border:hover {
+    background: white;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .gradient-border {
+    background:  #030D0F;
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(97.62deg, #FF40BF 2.27%, #0047E1 36.85%, #1CD1C6 68.92%, #00BD6F 98.48%);
+    z-index: -2;
+  }
+
+  .gradient-border::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(97.62deg, #FF40BF 2.27%, #0047E1 36.85%, #1CD1C6 68.92%, #00BD6F 98.48%);
+    z-index: -1;
+    border-radius: 0.5rem;
+  }
+
+  .gradient-border:hover::before {
+    filter: blur(40px);
+  }
+}
+</style>
