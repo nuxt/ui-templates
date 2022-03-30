@@ -9,18 +9,15 @@
     :root {
       --gradient-color: linear-gradient(90deg, #0047E1 0%, #34CDFE 50%, #00DC82 99.48%);
     }
-
     .spotlight {
       z-index: -1;
       background: linear-gradient(45deg,  #00DC82 0%, #36E4DA 50%, #0047E1 100%);
       filter: blur(20vh);
     }
-
     .gradient-border {
       position: relative;
       border-radius: 0.5rem;
     }
-
     .gradient-border::after {
       content: '';
       position: absolute;
@@ -34,11 +31,9 @@
       transition: opacity 0.5s ease-in-out;
       opacity: 0;
     }
-
     .gradient-border:hover::after {
       opacity: 1;
     }
-
     @media (prefers-color-scheme: light) {
       .gradient-border {
         background: rgb(229, 229, 229);
@@ -47,7 +42,6 @@
         -webkit-background-clip: padding-box; /* for Safari */
         background-clip: padding-box;
       }
-
       .gradient-border:hover {
         background: rgb(229, 229, 229);
         border: 2px solid rgba(255, 0, 0, 0);
@@ -55,7 +49,6 @@
         background-clip: padding-box;
       }
     }
-
     @media (prefers-color-scheme: dark) {
       .gradient-border {
         background: #1F2524;
@@ -64,7 +57,6 @@
         -webkit-background-clip: padding-box; /* for Safari */
         background-clip: padding-box;
       }
-
       .gradient-border:hover {
         background: #1F2524;
         border: 2px solid rgba(255, 0, 0, 0);
