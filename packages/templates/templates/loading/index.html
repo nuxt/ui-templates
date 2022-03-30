@@ -61,13 +61,18 @@
 </html>
 
 <style>
+
+:root {
+  --gradient-color: linear-gradient(90deg, #0047E1 0%, #34CDFE 50%, #00DC82 99.48%);
+}
+
 .spotlight {
   z-index: -1;
   background: linear-gradient(45deg,  #00DC82 0%, #36E4DA 50%, #0047E1 100%);
   filter: blur(20vh);
 }
 .nuxt-loader-bar {
-  background: linear-gradient(to right, #00DC82 0%, #36E4DA 50%, #0047E1 100%);
+  background: var(--gradient-color);
   animation: loading 2s linear 1s infinite running;
 }
 @keyframes loading {

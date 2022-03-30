@@ -73,14 +73,14 @@
         <h5 class="font-semibold text-xl">Documentation</h5>
         <p>We highly recommend you take a look at the Nuxt documentation, whether you are new or have previous experience with the framework.</p>
       </nuxt-link>
-      <nuxt-link to="/" class="gradient-border col-span-1 rounded bg-black/10 dark:bg-white/10 p-4 flex flex-col gap-y-4">
+      <nuxt-link to="/" class="cursor-pointer gradient-border col-span-1 rounded bg-black/10 dark:bg-white/10 p-4 flex flex-col gap-y-4">
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M20 3.33333C10.795 3.33333 3.33337 10.8067 3.33337 20.0283C3.33337 27.4033 8.10837 33.6617 14.7317 35.8683C15.565 36.0217 15.8684 35.5067 15.8684 35.0633C15.8684 34.6683 15.855 33.6167 15.8467 32.225C11.21 33.2333 10.2317 29.9867 10.2317 29.9867C9.47504 28.0567 8.38171 27.5433 8.38171 27.5433C6.86837 26.51 8.49671 26.53 8.49671 26.53C10.1684 26.6467 11.0484 28.25 11.0484 28.25C12.535 30.8 14.95 30.0633 15.8984 29.6367C16.0517 28.5583 16.4817 27.8233 16.9584 27.4067C13.2584 26.985 9.36671 25.5517 9.36671 19.155C9.36671 17.3333 10.0167 15.8417 11.0817 14.675C10.91 14.2533 10.3384 12.555 11.245 10.2583C11.245 10.2583 12.645 9.80833 15.8284 11.9683C17.188 11.5975 18.5908 11.4087 20 11.4067C21.4167 11.4133 22.8417 11.5983 24.1734 11.9683C27.355 9.80833 28.7517 10.2567 28.7517 10.2567C29.6617 12.555 29.0884 14.2533 28.9184 14.675C29.985 15.8417 30.6317 17.3333 30.6317 19.155C30.6317 25.5683 26.7334 26.98 23.0217 27.3933C23.62 27.9083 24.1517 28.9267 24.1517 30.485C24.1517 32.715 24.1317 34.5167 24.1317 35.0633C24.1317 35.51 24.4317 36.03 25.2784 35.8667C28.5972 34.7535 31.4823 32.6255 33.5258 29.7834C35.5694 26.9413 36.6681 23.5289 36.6667 20.0283C36.6667 10.8067 29.2034 3.33333 20 3.33333Z" fill="currentColor"/>
         </svg>
         <h5 class="font-semibold text-xl">GitHub</h5>
         <p>We highly recommend you take a look at the Nuxt documentation, whether you are new or have previous experience with the framework.</p>
       </nuxt-link>
-      <nuxt-link to="/" class="gradient-border col-span-1 rounded bg-black/10 dark:bg-white/10
+      <nuxt-link to="/" class="cursor-pointer gradient-border col-span-1 rounded bg-black/10 dark:bg-white/10
  p-4 flex flex-col gap-y-4">
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M13.8167 33.7557C26.395 33.7557 33.275 23.334 33.275 14.2973C33.275 14.0007 33.275 13.7057 33.255 13.414C34.5937 12.4449 35.7489 11.245 36.6667 9.87066C35.4185 10.424 34.0943 10.7869 32.7384 10.9473C34.1661 10.0924 35.2346 8.74791 35.745 7.164C34.4029 7.96048 32.9345 8.52188 31.4034 8.824C30.3724 7.72694 29.0084 7.00039 27.5228 6.75684C26.0371 6.51329 24.5126 6.76633 23.1852 7.47678C21.8579 8.18723 20.8018 9.31545 20.1805 10.6868C19.5592 12.0581 19.4073 13.596 19.7484 15.0623C17.0294 14.9261 14.3694 14.2195 11.9411 12.9886C9.51285 11.7577 7.37059 10.0299 5.65337 7.91733C4.7789 9.42267 4.51102 11.2047 4.90427 12.9006C5.29751 14.5965 6.32232 16.0788 7.77004 17.0457C6.68214 17.0142 5.61776 16.7215 4.66671 16.1923V16.279C4.66736 17.8578 5.21403 19.3878 6.21404 20.6096C7.21404 21.8313 8.60582 22.6696 10.1534 22.9823C9.14639 23.2569 8.08986 23.2968 7.06504 23.099C7.50198 24.4581 8.35284 25.6467 9.49859 26.4984C10.6443 27.35 12.0277 27.8223 13.455 27.849C12.0369 28.9633 10.413 29.7871 8.67625 30.2732C6.93948 30.7594 5.12391 30.8984 3.33337 30.6823C6.46105 32.6896 10.1004 33.7542 13.8167 33.749" fill="currentColor"/>
@@ -93,6 +93,10 @@
 </html>
 
 <style>
+:root {
+  --gradient-color: linear-gradient(90deg, #0047E1 0%, #34CDFE 50%, #00DC82 99.48%);
+}
+
 .spotlight {
   z-index: -1;
   background: linear-gradient(45deg,  #00DC82 0%, #36E4DA 50%, #0047E1 100%);
@@ -112,7 +116,7 @@
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(97.62deg, #FF40BF 2.27%, #0047E1 36.85%, #1CD1C6 68.92%, #00BD6F 98.48%);
+  background: var(--gradient-color);
   z-index: -1;
   border-radius: 0.5rem;
 }
@@ -124,7 +128,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(97.62deg, #FF40BF 2.27%, #0047E1 36.85%, #1CD1C6 68.92%, #00BD6F 98.48%);
+  background: var(--gradient-color);
   z-index: -2;
 }
 
