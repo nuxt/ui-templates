@@ -105,11 +105,10 @@
 
 .gradient-border {
   position: relative;
-  background: transparent;
   border-radius: 0.5rem;
 }
 
-.gradient-border:hover::after {
+.gradient-border::after {
   content: '';
   position: absolute;
   top: -2px;
@@ -119,30 +118,26 @@
   background: var(--gradient-color);
   z-index: -1;
   border-radius: 0.5rem;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
 }
 
-.gradient-border:hover::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--gradient-color);
-  z-index: -2;
+.gradient-border:hover::after {
+  opacity: 1;
 }
 
 @media (prefers-color-scheme: light) {
   .gradient-border {
-    border: 2px solid rgba(0, 0, 0, var(--tw-bg-opacity));
+    background: rgb(229, 229, 229);
+    border: 2px solid rgba(225, 225, 225, var(--tw-bg-opacity));
     --tw-bg-opacity: 0.1;
-    background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box;
   }
+
   .gradient-border:hover {
-    border: 2px solid rgba(255, 0, 0, 0);
     background: rgb(229, 229, 229);
+    border: 2px solid rgba(255, 0, 0, 0);
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box;
   }
@@ -150,15 +145,16 @@
 
 @media (prefers-color-scheme: dark) {
   .gradient-border {
-    border: 2px solid rgba(255, 255, 255, var(--tw-bg-opacity));
+    background: #1F2524;
+    border: 2px solid rgba(0, 0, 0, var(--tw-bg-opacity));
     --tw-bg-opacity: 0.1;
-    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box;
   }
+
   .gradient-border:hover {
+    background: #1F2524;
     border: 2px solid rgba(255, 0, 0, 0);
-    background-color: #1F2524;
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box;
   }
