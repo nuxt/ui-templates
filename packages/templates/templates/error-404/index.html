@@ -14,47 +14,33 @@
       background: linear-gradient(45deg,  #00DC82 0%, #36E4DA 50%, #0047E1 100%);
       filter: blur(20vh);
     }
+
     .gradient-border {
       position: relative;
-      background: transparent;
       border-radius: 0.5rem;
+      transition: box-shadow 0.2s ease-in-out;
     }
+
+    .gradient-border:hover {
+      box-shadow:
+      -10px 0px 30px #0047E1,
+      0px 0px 30px #34CDFE,
+      0px 0px 30px #00DC82;
+    }
+
     .gradient-border::before {
-      content: '';
+      content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: var(--gradient-color);
-      z-index: -2;
-      transition: filter 0.1s linear;
-    }
-
-    .gradient-border::after {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      background: var(--gradient-color);
-      z-index: -1;
+      inset: 0;
       border-radius: 0.5rem;
-    }
-
-    .gradient-border:hover::before {
-      filter: blur(10px);
-    }
-    @media (prefers-color-scheme: light) {
-      .gradient-border {
-        background: #F9FAFC;
-      }
-    }
-    @media (prefers-color-scheme: dark) {
-      .gradient-border {
-        background: #030D0F;
-      }
+      padding: 2px;
+      background: var(--gradient-color);
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      transition: filter 0.1s linear;
     }
     </style>
   </head>
@@ -64,7 +50,7 @@
       <h1 class="text-8xl sm:text-10xl font-medium mb-8">{{ messages.statusCode }}</h1>
       <p class="text-xl px-8 sm:px-0 sm:text-4xl font-light mb-16 leading-tight">{{ messages.description }}</p>
       <div class="w-full flex items-center justify-center">
-        <a href="/" class="gradient-border text-md sm:text-xl rounded-lg py-2 px-4 sm:py-3 sm:px-6 cursor-pointer">
+        <a href="/" class="gradient-border text-md sm:text-xl py-2 px-4 sm:py-3 sm:px-6 cursor-pointer">
           {{ messages.backHome }}
         </a>
      </div>
