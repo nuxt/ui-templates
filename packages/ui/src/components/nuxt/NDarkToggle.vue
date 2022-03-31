@@ -1,6 +1,7 @@
 <script setup lang="ts">
 /* eslint-disable vue/no-multiple-template-root */
 import { useToggle } from '@vueuse/core'
+
 const mode = useColorMode() // Auto imported from @nuxtjs/color-mode
 const isDark = computed<boolean>({
   get () {
@@ -19,5 +20,7 @@ const context = {
 </script>
 
 <template>
-  <slot v-bind="context" />
+  <ColorScheme tag="span">
+    <slot v-bind="context" />
+  </ColorScheme>
 </template>
