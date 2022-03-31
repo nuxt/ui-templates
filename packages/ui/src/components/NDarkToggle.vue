@@ -1,4 +1,5 @@
 <script setup lang="ts">
+/* eslint-disable vue/no-multiple-template-root */
 import { useToggle } from '@vueuse/core'
 
 const mode = useColorMode()
