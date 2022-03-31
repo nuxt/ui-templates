@@ -1592,6 +1592,7 @@ __metadata:
   dependencies:
     "@iconify-json/carbon": ^1.1.2
     "@nuxt/kit": "npm:@nuxt/kit-edge@latest"
+    "@nuxtjs/color-mode": ^3.0.2
     "@unocss/core": ^0.30.8
     "@unocss/nuxt": ^0.30.8
     "@unocss/preset-attributify": ^0.30.8
@@ -1638,6 +1639,18 @@ __metadata:
   peerDependencies:
     vue: 3.2.31
   checksum: 3cc8c123d09fb08c0b859b87a918c5523e56d0f6800fb86ff4e4c3c433034d0534b467f798c7c7968a0042872377089aef3981094e3da7c15879b620b6d19898
+  languageName: node
+  linkType: hard
+
+"@nuxtjs/color-mode@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@nuxtjs/color-mode@npm:3.0.2"
+  dependencies:
+    "@nuxt/kit": "npm:@nuxt/kit-edge@latest"
+    defu: ^5.0.0
+    lodash.template: ^4.5.0
+    pathe: ^0.2.0
+  checksum: 54e3706a45dc78cfc0ab29aa77f5ae59f624eca2c8181400aa717289d517f7588960f5d8dec00f703c47afff153c3bb59776246aba647fe8caf6bd07b709b929
   languageName: node
   linkType: hard
 
