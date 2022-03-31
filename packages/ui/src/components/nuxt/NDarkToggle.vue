@@ -1,21 +1,16 @@
 <script setup lang="ts">
 /* eslint-disable vue/no-multiple-template-root */
-import { useColorMode, useToggle } from '@vueuse/core'
-import { computed } from 'vue'
-
+import { useToggle } from '@vueuse/core'
 const mode = useColorMode()
-
 const isDark = computed<boolean>({
   get () {
     return mode.value === 'dark'
   },
   set (v) {
-    mode.value = v ? 'dark' : 'light'
+    mode.preference = v ? 'dark' : 'light'
   }
 })
-
 const toggle = useToggle(isDark)
-
 const context = {
   mode,
   isDark,
@@ -26,3 +21,4 @@ const context = {
 <template>
   <slot v-bind="context" />
 </template>
+© 2022 GitHub, Inc.
