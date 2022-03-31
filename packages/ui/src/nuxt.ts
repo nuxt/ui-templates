@@ -3,6 +3,7 @@ import { addComponentsDir, defineNuxtModule, installModule } from '@nuxt/kit'
 import defu from 'defu'
 
 import UnocssModule from '@unocss/nuxt'
+import VueUseModule from '@vueuse/nuxt'
 import NuxtColorMode from '@nuxtjs/color-mode'
 import { extendUnocssOptions } from './unocss'
 
@@ -29,6 +30,7 @@ export default defineNuxtModule({
     nuxt.options.colorMode = defu(nuxt.options.colorMode, { classSuffix: '' })
 
     await installModule(UnocssModule)
+    await installModule(VueUseModule)
     await installModule(NuxtColorMode)
   }
 })
