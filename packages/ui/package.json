@@ -43,7 +43,7 @@
     "unocss": "^0.31.2"
   },
   "devDependencies": {
-    "nuxt": "^3.0.0-rc.0",
+    "nuxt": "npm:nuxt3@latest",
     "unbuild": "^0.7.3"
   },
   "publishConfig": {
