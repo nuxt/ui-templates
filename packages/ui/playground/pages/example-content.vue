@@ -1,7 +1,7 @@
 <template>
   <NuxtExampleLayout example="test" repo="nuxt/content-next">
     <template #icon>
-      <IconContent />
+      @Nuxt/Content
     </template>
     <div>Hi</div>
   </NuxtExampleLayout>
