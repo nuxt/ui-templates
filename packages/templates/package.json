@@ -1,6 +1,6 @@
 {
   "name": "@nuxt/ui-templates",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "repository": "nuxt/ui",
   "license": "CC-BY-ND-4.0",
   "exports": {
@@ -24,9 +24,9 @@
     "test": "yarn lint && yarn build"
   },
   "devDependencies": {
-    "@nuxt/ui-assets": "*",
+    "@nuxt/ui-assets": "^0.1.0",
     "@types/html-minifier": "^4.0.2",
-    "@types/lodash.template": "^4.5.0",
+    "@types/lodash.template": "^4.5.1",
     "critters": "^0.0.16",
     "globby": "^13.1.1",
     "html-minifier": "^4.0.0",
@@ -35,7 +35,7 @@
     "lodash.template": "^4.5.0",
     "scule": "^0.2.1",
     "upath": "^2.0.1",
-    "vite": "^2.9.1",
+    "vite": "^2.9.5",
     "vite-plugin-windicss": "^1.8.4",
     "windicss": "^3.5.1"
   },
