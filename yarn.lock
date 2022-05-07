@@ -1458,59 +1458,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:3.0.0-rc.1":
-  version: 3.0.0-rc.1
-  resolution: "@nuxt/kit@npm:3.0.0-rc.1"
-  dependencies:
-    "@nuxt/schema": ^3.0.0-rc.1
-    c12: ^0.2.7
-    consola: ^2.15.3
-    defu: ^6.0.0
-    globby: ^13.1.1
-    hash-sum: ^2.0.0
-    ignore: ^5.2.0
-    jiti: ^1.13.0
-    knitwork: ^0.1.1
-    lodash.template: ^4.5.0
-    mlly: ^0.5.2
-    pathe: ^0.2.0
-    pkg-types: ^0.3.2
-    scule: ^0.2.1
-    semver: ^7.3.7
-    unctx: ^1.1.4
-    unimport: ^0.1.6
-    untyped: ^0.4.4
-  checksum: dcbe52a1628c6af589b12e2f9567c876082b5850458adbfeee8bb8f40a758678c8c9fbc146c5cf0de8b757876d8c727566783d2bdbde38aa189b5cfe13e7cefa
-  languageName: node
-  linkType: hard
-
-"@nuxt/kit@npm:@nuxt/kit-edge@latest":
-  version: 3.0.0-rc.2-27530889.9e5a3cd
-  resolution: "@nuxt/kit-edge@npm:3.0.0-rc.2-27530889.9e5a3cd"
-  dependencies:
-    "@nuxt/schema": "npm:@nuxt/schema-edge@3.0.0-rc.2-27530889.9e5a3cd"
-    c12: ^0.2.7
-    consola: ^2.15.3
-    defu: ^6.0.0
-    globby: ^13.1.1
-    hash-sum: ^2.0.0
-    ignore: ^5.2.0
-    jiti: ^1.13.0
-    knitwork: ^0.1.1
-    lodash.template: ^4.5.0
-    mlly: ^0.5.2
-    pathe: ^0.3.0
-    pkg-types: ^0.3.2
-    scule: ^0.2.1
-    semver: ^7.3.7
-    unctx: ^1.1.4
-    unimport: ^0.1.8
-    untyped: ^0.4.4
-  checksum: 376d4524ce8399435c7d626bcfd8d1bc3577b323f7c5a1a77dbcb740430e1046cbb594b12678bb8294b134996d82793ce6f3853122909e892a6bb1171cdc22ee
-  languageName: node
-  linkType: hard
-
-"@nuxt/kit@npm:^3.0.0-rc.2":
+"@nuxt/kit@npm:3.0.0-rc.2":
   version: 3.0.0-rc.2
   resolution: "@nuxt/kit@npm:3.0.0-rc.2"
   dependencies:
@@ -1536,25 +1484,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/schema@npm:@nuxt/schema-edge@3.0.0-rc.2-27530889.9e5a3cd":
-  version: 3.0.0-rc.2-27530889.9e5a3cd
-  resolution: "@nuxt/schema-edge@npm:3.0.0-rc.2-27530889.9e5a3cd"
-  dependencies:
-    c12: ^0.2.7
-    create-require: ^1.1.1
-    defu: ^6.0.0
-    jiti: ^1.13.0
-    pathe: ^0.3.0
-    postcss-import-resolver: ^2.0.0
-    scule: ^0.2.1
-    std-env: ^3.1.1
-    ufo: ^0.8.4
-    unimport: ^0.1.8
-  checksum: 93f13ac66239686b029d40314ec77b75b3113bac1b552e3a65f0e179b861e0c1bb44d3ac067c71513fd1278bae48e13091df0dcf5eb468d9504a9e2155dad776
-  languageName: node
-  linkType: hard
-
-"@nuxt/schema@npm:^3.0.0-rc.1, @nuxt/schema@npm:^3.0.0-rc.2":
+"@nuxt/schema@npm:3.0.0-rc.2":
   version: 3.0.0-rc.2
   resolution: "@nuxt/schema@npm:3.0.0-rc.2"
   dependencies:
@@ -11624,7 +11554,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ufo@npm:^0.8.3, ufo@npm:^0.8.4":
+"ufo@npm:^0.8.3":
   version: 0.8.4
   resolution: "ufo@npm:0.8.4"
   checksum: a2ebef6f64b9cc4114fc65405837eeb83eb8975edd6d54c7f37abb6905da6fd1f63524e4a02c8b087e7b0b3db6e6f4f798a3d86a96500410ff590b405f807dc9
@@ -11750,7 +11680,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unimport@npm:^0.1.6, unimport@npm:^0.1.8":
+"unimport@npm:^0.1.8":
   version: 0.1.8
   resolution: "unimport@npm:0.1.8"
   dependencies:
