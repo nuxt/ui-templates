@@ -37,7 +37,7 @@ export default defineNuxtModule({
     const modulesToInstall = [
       '@unocss/nuxt',
       '@vueuse/nuxt',
-      '@nuxtjs/color-mode',
+      '@nuxtjs/color-mode'
     ]
 
     for (const mod of modulesToInstall) {
