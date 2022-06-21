@@ -3,7 +3,7 @@
 /// <reference types="@nuxtjs/color-mode" />
 
 import { fileURLToPath } from 'url'
-import { addComponentsDir, defineNuxtModule, installModule, logger, resolveModule } from '@nuxt/kit'
+import { addComponentsDir, defineNuxtModule, installModule, resolveModule } from '@nuxt/kit'
 import defu from 'defu'
 import { extendUnocssOptions } from './unocss'
 
