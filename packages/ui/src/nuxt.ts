@@ -3,7 +3,7 @@
 /// <reference types="@nuxtjs/color-mode" />
 
 import { fileURLToPath } from 'url'
-import { addComponentsDir, defineNuxtModule, installModule } from '@nuxt/kit'
+import { addComponentsDir, defineNuxtModule, installModule, logger, resolveModule } from '@nuxt/kit'
 import defu from 'defu'
 import { extendUnocssOptions } from './unocss'
 
@@ -34,9 +34,16 @@ export default defineNuxtModule({
     nuxt.options.vueuse = nuxt.options.vueuse || {}
     nuxt.options.colorMode = defu(nuxt.options.colorMode, { classSuffix: '' })
 
-    await installModule('@unocss/nuxt')
-    await installModule('@vueuse/nuxt')
-    await installModule('@nuxtjs/color-mode')
+    const modulesToInstall = [
+      '@unocss/nuxt',
+      '@vueuse/nuxt',
+      '@nuxtjs/color-mode',
+    ]
+
+    for (const mod of modulesToInstall) {
+      const modulePath = resolveModule(mod, { paths: import.meta.url })
+      await installModule(modulePath)
+    }
   }
 })
 
