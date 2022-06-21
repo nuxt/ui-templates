@@ -1,7 +1,3 @@
-/// <reference types="@unocss/nuxt" />
-/// <reference types="@vueuse/nuxt" />
-/// <reference types="@nuxtjs/color-mode" />
-
 import { fileURLToPath } from 'url'
 import { addComponentsDir, defineNuxtModule, installModule, createResolver } from '@nuxt/kit'
 import defu from 'defu'
