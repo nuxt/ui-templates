@@ -107,7 +107,10 @@ export const NuxtUIPreset: Preset<Theme> = {
 
     // tip
     'n-tip-base': 'bg-context/8 text-context px-1em py-0.4em rounded flex items-center dark:bg-context/12',
-    'n-tip-icon': '-ml-0.2em mr-0.4em text-1.1em'
+    'n-tip-icon': '-ml-0.2em mr-0.4em text-1.1em',
+
+    // backTop
+    'n-backTop-base': 'fixed right-10 bottom-10'
   }
 }
 

@@ -4,11 +4,14 @@
 <script setup lang="tsx">
 import { useWindowScroll } from '@vueuse/core'
 interface IProps {
-  offsetTop?: number
+  offsetTop?: number,
 }
 const props = defineProps<IProps>()
+
 const { offsetTop } = toRefs(props);
 const offsetTopVal = offsetTop.value ?? 400
+
+const slots = useSlots()
 
 const { y } = useWindowScroll()
 
@@ -20,9 +23,9 @@ function callBackTop(){
 }
 
 const backTop = ()=>{
-    let newClass = `fixed right-[40px] bottom-[40px] cursor-pointer ${y.value > offsetTopVal ? '' : 'hidden'}`
+    let newClass = `fixed right-10 bottom-10 cursor-pointer ${y.value > offsetTopVal ? '' : 'hidden'}`
     return <div class={newClass} onClick={callBackTop}>
-        <div class="rounded p-2 bg-blue text-white">UP</div>
+        {slots.default()}
     </div>
 }
 

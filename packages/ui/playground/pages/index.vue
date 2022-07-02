@@ -229,7 +229,9 @@ const radio = ref('a')
         </div>
       </NCard>
 
-      <NBackTop :offsetTop="100"/>
+      <NBackTop :offsetTop="100">
+        <div class="rounded p-2 bg-blue text-white">UP</div>
+      </NBackTop>
     </div>
   </div>
 </template>
