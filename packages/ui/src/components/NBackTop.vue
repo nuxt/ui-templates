@@ -23,7 +23,7 @@ function callBackTop(){
 }
 
 const backTop = ()=>{
-    let newClass = `fixed right-10 bottom-10 cursor-pointer ${y.value > offsetTopVal ? '' : 'hidden'}`
+    let newClass = `n-backTop-base ${y.value > offsetTopVal ? '' : 'hidden'}`
     return <div class={newClass} onClick={callBackTop}>
         {slots.default()}
     </div>
