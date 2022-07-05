@@ -1,6 +1,6 @@
 {
   "name": "@w/ui-templates",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "repository": "516310460/ui",
   "license": "CC-BY-ND-4.0",
   "exports": {
@@ -26,7 +26,7 @@
   "devDependencies": {
     "@types/html-minifier": "^4.0.2",
     "@types/lodash.template": "^4.5.1",
-    "@w/ui-assets": "^0.0.1",
+    "@w/ui-assets": "^0.1.0",
     "critters": "^0.0.16",
     "globby": "^13.1.2",
     "html-minifier": "^4.0.0",
