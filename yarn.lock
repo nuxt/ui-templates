@@ -1643,68 +1643,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/ui-assets@^0.1.0, @nuxt/ui-assets@workspace:packages/assets":
-  version: 0.0.0-use.local
-  resolution: "@nuxt/ui-assets@workspace:packages/assets"
-  languageName: unknown
-  linkType: soft
-
-"@nuxt/ui-monorepo@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@nuxt/ui-monorepo@workspace:."
-  dependencies:
-    "@nuxtjs/eslint-config-typescript": ^10.0.0
-    eslint: ^8.18.0
-    jiti: ^1.14.0
-    lerna: ^5.1.6
-    typescript: ^4.7.4
-  languageName: unknown
-  linkType: soft
-
-"@nuxt/ui-templates@^0.1.1, @nuxt/ui-templates@workspace:packages/templates":
-  version: 0.0.0-use.local
-  resolution: "@nuxt/ui-templates@workspace:packages/templates"
-  dependencies:
-    "@nuxt/ui-assets": ^0.1.0
-    "@types/html-minifier": ^4.0.2
-    "@types/lodash.template": ^4.5.1
-    critters: ^0.0.16
-    globby: ^13.1.2
-    html-minifier: ^4.0.0
-    jiti: ^1.14.0
-    knitwork: ^0.1.2
-    lodash.template: ^4.5.0
-    scule: ^0.2.1
-    upath: ^2.0.1
-    vite: ^2.9.12
-    vite-plugin-windicss: ^1.8.5
-    windicss: ^3.5.5
-  languageName: unknown
-  linkType: soft
-
-"@nuxt/ui@workspace:packages/ui":
-  version: 0.0.0-use.local
-  resolution: "@nuxt/ui@workspace:packages/ui"
-  dependencies:
-    "@iconify-json/carbon": ^1.1.6
-    "@nuxt/kit": ^3.0.0-rc.4
-    "@nuxtjs/color-mode": ^3.1.4
-    "@unocss/core": ^0.41.0
-    "@unocss/nuxt": ^0.41.0
-    "@unocss/preset-attributify": ^0.41.0
-    "@unocss/preset-icons": ^0.41.0
-    "@unocss/preset-mini": ^0.41.0
-    "@unocss/reset": ^0.41.0
-    "@vueuse/core": ^8.7.5
-    "@vueuse/integrations": ^8.7.5
-    "@vueuse/nuxt": ^8.7.5
-    defu: ^6.0.0
-    focus-trap: ^6.9.4
-    nuxt: 3.0.0-rc.4
-    unbuild: ^0.7.4
-    unocss: ^0.41.0
-  languageName: unknown
-  linkType: soft
+"@nuxt/ui-templates@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "@nuxt/ui-templates@npm:0.1.1"
+  checksum: ca4def93dc80cb6cffc2e599c4422f2a82ccb251dbc61250140d86b23f2c43a0615a3975d383f24a8e27d8902edc8c5885aad4f6f3343520d3c6fbe44c2b1c40
+  languageName: node
+  linkType: hard
 
 "@nuxt/vite-builder@npm:^3.0.0-rc.4":
   version: 3.0.0-rc.4
@@ -2873,6 +2817,69 @@ __metadata:
   checksum: 475147a8de209332edd7a520fea0d7076cf1b275a5757aeffb9c6d4e9ecd2e7943b953f803cc30dac55776122f82091063ba089d09b9a48726c7b692f33efb72
   languageName: node
   linkType: hard
+
+"@w/ui-assets@^0.0.1, @w/ui-assets@workspace:packages/assets":
+  version: 0.0.0-use.local
+  resolution: "@w/ui-assets@workspace:packages/assets"
+  languageName: unknown
+  linkType: soft
+
+"@w/ui-monorepo@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@w/ui-monorepo@workspace:."
+  dependencies:
+    "@nuxtjs/eslint-config-typescript": ^10.0.0
+    eslint: ^8.18.0
+    jiti: ^1.14.0
+    lerna: ^5.1.6
+    typescript: ^4.7.4
+  languageName: unknown
+  linkType: soft
+
+"@w/ui-templates@workspace:packages/templates":
+  version: 0.0.0-use.local
+  resolution: "@w/ui-templates@workspace:packages/templates"
+  dependencies:
+    "@types/html-minifier": ^4.0.2
+    "@types/lodash.template": ^4.5.1
+    "@w/ui-assets": ^0.0.1
+    critters: ^0.0.16
+    globby: ^13.1.2
+    html-minifier: ^4.0.0
+    jiti: ^1.14.0
+    knitwork: ^0.1.2
+    lodash.template: ^4.5.0
+    scule: ^0.2.1
+    upath: ^2.0.1
+    vite: ^2.9.12
+    vite-plugin-windicss: ^1.8.5
+    windicss: ^3.5.5
+  languageName: unknown
+  linkType: soft
+
+"@w/ui@workspace:packages/ui":
+  version: 0.0.0-use.local
+  resolution: "@w/ui@workspace:packages/ui"
+  dependencies:
+    "@iconify-json/carbon": ^1.1.6
+    "@nuxt/kit": ^3.0.0-rc.4
+    "@nuxtjs/color-mode": ^3.1.4
+    "@unocss/core": ^0.41.0
+    "@unocss/nuxt": ^0.41.0
+    "@unocss/preset-attributify": ^0.41.0
+    "@unocss/preset-icons": ^0.41.0
+    "@unocss/preset-mini": ^0.41.0
+    "@unocss/reset": ^0.41.0
+    "@vueuse/core": ^8.7.5
+    "@vueuse/integrations": ^8.7.5
+    "@vueuse/nuxt": ^8.7.5
+    defu: ^6.0.0
+    focus-trap: ^6.9.4
+    nuxt: 3.0.0-rc.4
+    unbuild: ^0.7.4
+    unocss: ^0.41.0
+  languageName: unknown
+  linkType: soft
 
 "@windicss/config@npm:1.8.5":
   version: 1.8.5

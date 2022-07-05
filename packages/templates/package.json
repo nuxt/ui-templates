@@ -1,7 +1,7 @@
 {
-  "name": "@nuxt/ui-templates",
-  "version": "0.1.1",
-  "repository": "nuxt/ui",
+  "name": "@w/ui-templates",
+  "version": "0.0.1",
+  "repository": "516310460/ui",
   "license": "CC-BY-ND-4.0",
   "exports": {
     "./templates/*": "./dist/templates/*",
@@ -24,9 +24,9 @@
     "test": "yarn lint && yarn build"
   },
   "devDependencies": {
-    "@nuxt/ui-assets": "^0.1.0",
     "@types/html-minifier": "^4.0.2",
     "@types/lodash.template": "^4.5.1",
+    "@w/ui-assets": "^0.0.1",
     "critters": "^0.0.16",
     "globby": "^13.1.2",
     "html-minifier": "^4.0.0",
