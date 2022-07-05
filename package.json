@@ -1,5 +1,5 @@
 {
-  "name": "@w/ui-monorepo",
+  "name": "@nuxt/ui-monorepo",
   "private": true,
   "version": "0.0.0",
   "license": "MIT",
