@@ -60,7 +60,7 @@
         const x = e.clientX - (pointerEl.left + (nuxtImg.clientWidth / 2))
         const y = e.clientY - (pointerEl.top + (nuxtImg.clientHeight / 2))
         const coord = Math.abs(y) + Math.abs(x)
-        const size = (800 - coord) / 2
+        const size = (1000 - coord) / 2
 
         mouseLight.style.top = `${e.clientY - bodyContainer.getBoundingClientRect().y - mouseLight.clientHeight / 2}px`
         mouseLight.style.left = `${e.clientX - mouseLight.clientWidth / 2}px`
