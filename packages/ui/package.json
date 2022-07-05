@@ -1,6 +1,6 @@
 {
   "name": "@w/ui",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -48,5 +48,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "88779d720cff59f6e9654e069aee89acd905839e"
 }

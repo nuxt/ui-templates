@@ -1,6 +1,6 @@
 {
   "name": "@w/ui-templates",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "repository": "516310460/ui",
   "license": "CC-BY-ND-4.0",
   "exports": {
@@ -41,5 +41,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "88779d720cff59f6e9654e069aee89acd905839e"
 }
