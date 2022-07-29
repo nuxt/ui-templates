@@ -39,7 +39,7 @@
     "@unocss/preset-mini": "^0.45.1",
     "@unocss/reset": "^0.45.1",
     "@vueuse/core": "^8.9.4",
-    "@vueuse/integrations": "^8.9.4",
+    "@vueuse/integrations": "^9.0.2",
     "@vueuse/nuxt": "^8.9.4",
     "defu": "^6.0.0",
     "focus-trap": "^6.9.4",
