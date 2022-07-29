@@ -1723,7 +1723,7 @@ __metadata:
     "@unocss/preset-icons": ^0.45.1
     "@unocss/preset-mini": ^0.45.1
     "@unocss/reset": ^0.45.1
-    "@vueuse/core": ^8.9.4
+    "@vueuse/core": ^9.0.1
     "@vueuse/integrations": ^8.9.4
     "@vueuse/nuxt": ^8.9.4
     defu: ^6.0.0
@@ -2273,6 +2273,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/web-bluetooth@npm:^0.0.15":
+  version: 0.0.15
+  resolution: "@types/web-bluetooth@npm:0.0.15"
+  checksum: 4e3b3b1c0baf6735690ce0c5ffaac53de3dbd16362316cbc5e32970bcb1e1baf16dae0a9f30fe86256ad0ee22a4533423f443835273efc54b15235086ebda85b
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/eslint-plugin@npm:^5.21.0":
   version: 5.30.6
   resolution: "@typescript-eslint/eslint-plugin@npm:5.30.6"
@@ -2810,7 +2817,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:8.9.4, @vueuse/core@npm:^8.9.4":
+"@vueuse/core@npm:8.9.4":
   version: 8.9.4
   resolution: "@vueuse/core@npm:8.9.4"
   dependencies:
@@ -2827,6 +2834,18 @@ __metadata:
     vue:
       optional: true
   checksum: 4f19874884d246e724562051143f27e18d7e7aefb941d4417e785027b87a895aea7ed51f3c9d6c1af219ea33d41cc1e0fcba113b72922ce6057a518cb0b83572
+  languageName: node
+  linkType: hard
+
+"@vueuse/core@npm:^9.0.1":
+  version: 9.0.1
+  resolution: "@vueuse/core@npm:9.0.1"
+  dependencies:
+    "@types/web-bluetooth": ^0.0.15
+    "@vueuse/metadata": 9.0.1
+    "@vueuse/shared": 9.0.1
+    vue-demi: "*"
+  checksum: fe66f9f209b98e19ce8dd2cc26ff93c4fcd6710d7af81cb5b3469fe43ee3d150f050756f4a7be5ad9cc6a1759f2aa673e9a785d29bc1abfffcfdf87e12c3fca9
   languageName: node
   linkType: hard
 
@@ -2889,6 +2908,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vueuse/metadata@npm:9.0.1":
+  version: 9.0.1
+  resolution: "@vueuse/metadata@npm:9.0.1"
+  checksum: 3f22bc1dd13afc4dd19ac380d5b64a600fa478cfa698a31a41aba031a2b977c9ffacebc708f8ee689894221cf007800836c038bb9ffe46f2cbb62382411bc391
+  languageName: node
+  linkType: hard
+
 "@vueuse/nuxt@npm:^8.9.4":
   version: 8.9.4
   resolution: "@vueuse/nuxt@npm:8.9.4"
@@ -2916,6 +2942,15 @@ __metadata:
     vue:
       optional: true
   checksum: 83a29ec879073100e268863f607b3a8175ac1d70318b85f74907ed69bcf0d538f89b2ccd3c14ac37eab326ec3564e0c1623f1f9af0980516a5617e7f81fdd9bb
+  languageName: node
+  linkType: hard
+
+"@vueuse/shared@npm:9.0.1":
+  version: 9.0.1
+  resolution: "@vueuse/shared@npm:9.0.1"
+  dependencies:
+    vue-demi: "*"
+  checksum: 73e19675885e283b5d7f7d99d12f7f64a895b76b5372763323b813025c46a6b468047fea64bae3b372f1c169dcea8edfd437e8c0cd346e24a11a596e1bb01293
   languageName: node
   linkType: hard
 
