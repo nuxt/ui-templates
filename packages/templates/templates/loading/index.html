@@ -14,47 +14,72 @@
         opacity: 0.5;
         transition: opacity 0.4s ease-in;
       }
-      .nuxt-loader-bar {
-        background: repeating-linear-gradient(to right, #0047E1 0%, #34CDFE 25%, #00DC82 50%, #36E4DA 75%, #0047E1 100%);
-        width: 100%;
-        background-size: 200% auto;
-        background-position: 0 0;
-        animation: gradient 2s infinite, width 8s infinite ease-in-out;
-        animation-fill-mode: forwards;
-        animation-timing-function: linear;
-      }
       .mouse-gradient {
         background: repeating-linear-gradient(to right, #0047E1 0%, #34CDFE 50%, #00DC82 100%);
         filter: blur(100px);
         opacity: 0.5;
-      }
-      @keyframes gradient {
-        0% {
-          background-position: 0 0;
-        }
-        100% {
-          background-position: -200% 0;
-        }
-      }
-      @keyframes width {
-        0% {
-          width: 100%;
-        }
-        50% {
-          width: 0%;
-        }
-        100% {
-          width: 100%;
-        }
       }
       @media (prefers-color-scheme: dark) {
         #nuxtImageDigit3 {
           fill: #00DC82 !important;
         }
       }
+      @keyframes rotate {
+        0% {
+          transform: rotate(0);
+        }
+        10% {
+          transform: rotate(0.15turn);
+        }
+        50% {
+          transform: rotate(0.6turn);
+        }
+        100% {
+          transform: rotate(1turn);
+        }
+      }
+      .conic {
+        position: relative;
+        z-index: 0;
+        margin: 15px;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 2rem;
+      }
+      .conic::before {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        left: -50%;
+        top: -50%;
+        width: 200%;
+        height: 200%;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-image: conic-gradient(transparent, #00DC82 12%, #34CDFE 14%, #0047E1 16%, #36E4DA 18%, transparent 30%);
+        animation: rotate 4s linear infinite;
+      }
+      .conic::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 5px;
+        top: 5px;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        background: white;
+        border-radius: 5px;
+      }
+      @media (prefers-color-scheme: dark) {
+        .conic::after {
+          background: #000;
+        }
+      }
     </style>
   </head>
   <body class="relative overflow-hidden min-h-screen bg-white dark:bg-black flex flex-col justify-center items-center text-center">
+    <div class="conic absolute inset-0"></div>
     <div id="mouseLight" class="absolute top-0 rounded-full mouse-gradient transition-opacity h-[200px] w-[200px]"></div>
     <a href="https://v3.nuxtjs.org" target="_blank" rel="noopener" class="nuxt-logo z-20">
     <svg id="nuxtImg" viewBox="0 0 221 65" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +107,6 @@
     <div class="spotlight-wrapper">
       <div class="fixed left-0 right-0 spotlight spotlight-bottom z-q0"></div>
     </div>
-    <div class="nuxt-loader-bar h-[4px] inline rounded"/>
     <script>
       const nuxtImg = window.document.getElementById('nuxtImg')
       const body = window.document.body
