@@ -3,7 +3,7 @@
   <head>
     <title>{{ messages.loading }} | {{ messages.appName }}</title>
     <meta charset="utf-8"/>
-    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0" name="viewport" />
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0" name="viewport"/>
     <script type="module" src="/styles.ts"></script>
     <style>
       .spotlight {
@@ -57,7 +57,7 @@
           width: 100%;
         }
         50% {
-          width: 0%;
+          width: 0;
         }
         100% {
           width: 100%;
@@ -105,7 +105,7 @@
     <div class="spotlight-wrapper">
       <div class="fixed left-0 right-0 spotlight spotlight-bottom z-q0"></div>
     </div>
-    <div class="nuxt-loader-bar"/>
+    <div class="nuxt-loader-bar"></div>
     <script>
       let ANIMATION_KEY = 'nuxt-loading-enable-animation'
       let isLowPerformance = checkIsLowPerformance()
@@ -126,7 +126,7 @@
          || navigator.deviceMemory < 1
       }
       function calculateDistance(elem, mouseX, mouseY) {
-        return Math.floor(Math.sqrt(Math.pow(mouseX - (elem.x+(elem.width/2)), 2) + Math.pow(mouseY - (elem.top+(elem.height/2)), 2)));
+        return Math.floor(Math.sqrt(Math.pow(mouseX - (elem.x + (elem.width / 2)), 2) + Math.pow(mouseY - (elem.top + (elem.height / 2)), 2)));
       }
       function onFocusOut() {
         if (!enableAnimation) {
