@@ -7,6 +7,28 @@
     <link rel="icon" type="image/png" href="/icon.png" />
     <script type="module" src="/styles.ts"></script>
     <style lang="postcss">
+      /* `font-normal` */
+      @font-face {
+        font-family: "RoobertPRO";
+        src: url("/fonts/RoobertPRO-Regular.woff2") format("woff2"),
+            url("/fonts/RoobertPRO-Regular.woff") format("woff");
+        font-weight: 400;
+      }
+      /* `font-medium */
+      @font-face {
+        font-family: "RoobertPRO";
+        src: url("/fonts/RoobertPRO-Medium.woff2") format("woff2"),
+            url("/fonts/RoobertPRO-Medium.woff") format("woff");
+        font-weight: 500;
+      }
+      /* `font-semibold` */
+      @font-face {
+        font-family: "RoobertPRO";
+        src: url("/fonts/RoobertPRO-SemiBold.woff2") format("woff2"),
+            url("/fonts/RoobertPRO-SemiBold.woff") format("woff");
+        font-weight: 600;
+      }
+
       /*linear gradients */
       @media (prefers-color-scheme: light) {
         .get-started-gradient-border {
@@ -36,6 +58,10 @@
         .gradient-border-documentation {
           background: linear-gradient(var(--gradient-angle), rgba(0, 220, 130), rgba(0, 63, 37), rgba(255, 255, 255, 0.2), rgba(0, 63, 37));
         }
+      }
+
+      body {
+        font-family: 'RoobertPRO' !important;
       }
 
       /* get started */
@@ -212,7 +238,7 @@
       }
     </style>
   </head>
-  <body class="font-sans antialiased bg-white dark:bg-black text-black dark:text-white min-h-screen place-content-center flex flex-col items-center justify-center text-sm sm:text-base">
+  <body class="antialiased bg-white dark:bg-black text-black dark:text-white min-h-screen place-content-center flex flex-col items-center justify-center text-sm sm:text-base">
     <div class="flex-1 flex flex-col gap-y-16 py-14">
       <div class="flex flex-col gap-y-4 items-center justify-center">
         <a href="https://nuxt.com" target="_blank">
