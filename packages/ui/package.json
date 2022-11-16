@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "nuxt": "npm:nuxt3@latest",
-    "unbuild": "^0.9.4"
+    "unbuild": "^1.0.1"
   },
   "publishConfig": {
     "access": "public"
