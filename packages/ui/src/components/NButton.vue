@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { NuxtLink } from '#components'
+import { resolveComponent } from '#imports'
 
 defineProps<{
   to?: string
   icon?: string
 }>()
+
+const NuxtLink = resolveComponent('NuxtLink')
 </script>
 
 <template>
