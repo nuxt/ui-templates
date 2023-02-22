@@ -78,12 +78,12 @@ const radio = ref('a')
         <ShowSource src="https://github.com/nuxt/ui/blob/main/packages/ui/playground/pages/index.vue#L68-L76" />
       </NCard>
 
-      <NCard class="p4" n="green">
+      <NCard class="p4">
         <div class="n-header-upper">
           Links
         </div>
         <form class="flex gap-3 items-center">
-          <NLink to="/">
+          <NLink to="/" n="green">
             NuxtLink
           </NLink>
           <NLink href="https://nuxt.com">
