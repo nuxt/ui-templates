@@ -26,7 +26,7 @@
     "dev": "nuxi dev playground",
     "lint": "eslint . --ext .vue,.ts",
     "prepack": "npm run build",
-    "playground:build": "nuxi build playground"
+    "playground:build": "nuxi generate playground"
   },
   "dependencies": {
     "@iconify-json/carbon": "^1.1.15",
