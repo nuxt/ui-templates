@@ -1,6 +1,6 @@
 # 🎨 Nuxt Assets
 
-Unified Templates & Assets for [Nuxt](https://github.com/nuxt/nuxt).
+Unified Assets & Templates for [Nuxt](https://github.com/nuxt/nuxt).
 
 ## 📦 Packages
 
