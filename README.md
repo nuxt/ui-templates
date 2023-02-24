@@ -8,10 +8,6 @@ Unified UI and Design Kit for the Nuxt.
 <tbody>
 <tr>
   <td>
-    <h2><a href="./packages/ui">UI Components</a></h2>
-    <p>UI kit for examples and internal tooling UI. Demo on <a href="https://components.ui.nuxtjs.org">components.ui.nuxtjs.org</a></p>
-  </td>
-  <td>
     <h2><a href="./packages/templates">UI Templates</a></h2>
     <p>Pre-compiled html templates for internal pages. Demo on <a href="https://templates.ui.nuxtjs.org">templates.ui.nuxtjs.org</a></p>
   </td>
