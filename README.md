@@ -1,6 +1,6 @@
-# 🎨 Nuxt UI
+# 🎨 Nuxt Assets
 
-Unified UI and Design Kit for the Nuxt.
+Unified Templates & Assets for [Nuxt](https://github.com/nuxt/nuxt).
 
 ## 📦 Packages
 
