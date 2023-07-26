@@ -20,6 +20,9 @@ fi
 
 # Release packages
 for p in packages/* ; do
+  if [[ $p == "packages/ui" ]] ; then
+    continue
+  fi
   pushd $p
   echo "Publishing $p"
   npm publish --access public --tolerate-republish
