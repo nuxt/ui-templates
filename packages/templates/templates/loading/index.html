@@ -3,14 +3,11 @@
   <head>
     <title>{{ messages.loading }} | {{ messages.appName }}</title>
     <meta charset="utf-8" />
-    <meta
-      content="width=device-width,initial-scale=1.0,minimum-scale=1.0"
-      name="viewport"
-    />
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0" name="viewport" />
     <script type="module" src="/styles.ts"></script>
     <style>
       .nuxt-loader-bar {
-        background: repeating-linear-gradient(to right, #36e4da 0%, #1de0b1 25%, #00dc82 50%, #1de0b1 75%, #36e4da 100%);
+        background: repeating-linear-gradient(to right, #36E4DA 0%, #1DE0B1 25%, #00DC82 50%, #1DE0B1 75%, #36E4DA 100%);
         height: 100px;
         background-size: 200% auto;
         background-position: 0 0;
@@ -31,7 +28,7 @@
         filter: blur(100px);
       }
       .visual-effects .mouse-gradient {
-        background: repeating-linear-gradient(to right, #00dc82 0%, #1de0b1 50%, #36e4da 100%);
+        background: repeating-linear-gradient(to right, #00DC82 0%, #1DE0B1 50%, #36E4DA 100%);
         filter: blur(100px);
         opacity: 0.5;
       }
@@ -66,8 +63,7 @@
         }
       }
       @media (prefers-color-scheme: dark) {
-        html,
-        body {
+        html, body {
           color: white;
           color-scheme: dark;
         }
@@ -111,122 +107,104 @@
     <button id="animation-toggle">Animation Enabled</button>
     <div class="nuxt-loader-bar"></div>
     <script>
-      const ANIMATION_KEY = "nuxt-loading-enable-animation";
-      const isSafari = /^((?!chrome|android).)*safari/i.test(
-        navigator.userAgent
-      );
+      const ANIMATION_KEY = 'nuxt-loading-enable-animation'
+      const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 
-      let isLowPerformance = checkIsLowPerformance();
-      let enableAnimation =
-        localStorage.getItem(ANIMATION_KEY) === "false"
-          ? false
-          : localStorage.getItem(ANIMATION_KEY) === "true"
+      let isLowPerformance = checkIsLowPerformance()
+      let enableAnimation = localStorage.getItem(ANIMATION_KEY) === 'false'
+         ? false
+         : localStorage.getItem(ANIMATION_KEY) === 'true'
           ? true
-          : !isLowPerformance;
+          : !isLowPerformance
 
-      const mouseLight = window.document.getElementById("mouseLight");
-      const nuxtImg = window.document.getElementById("nuxtImg");
-      const animationToggle =
-        window.document.getElementById("animation-toggle");
-      const body = window.document.body;
-      let bodyRect;
+      const mouseLight = window.document.getElementById('mouseLight')
+      const nuxtImg = window.document.getElementById('nuxtImg')
+      const animationToggle = window.document.getElementById('animation-toggle')
+      const body = window.document.body
+      let bodyRect
 
       function checkIsLowPerformance() {
-        return (
-          window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
-          navigator.hardwareConcurrency < 2 ||
-          navigator.deviceMemory < 1 ||
-          // Safari has some performance issue on the blur filter. Remove this when it's fixed.
-          isSafari
-        );
+        return window.matchMedia('(prefers-reduced-motion: reduce)').matches
+         || navigator.hardwareConcurrency < 2
+         || navigator.deviceMemory < 1
+         // Safari has some performance issue on the blur filter. Remove this when it's fixed.
+         || isSafari
       }
       function calculateDistance(elem, mouseX, mouseY) {
-        return Math.floor(
-          Math.sqrt(
-            Math.pow(mouseX - (elem.x + elem.width / 2), 2) +
-              Math.pow(mouseY - (elem.top + elem.height / 2), 2)
-          )
-        );
+        return Math.floor(Math.sqrt(Math.pow(mouseX - (elem.x + (elem.width / 2)), 2) + Math.pow(mouseY - (elem.top + (elem.height / 2)), 2)));
       }
       function onFocusOut() {
         if (!enableAnimation) {
-          return;
+          return
         }
-        mouseLight.style.opacity = 0;
-        nuxtImg.style.opacity = 0.7;
+        mouseLight.style.opacity = 0
+        nuxtImg.style.opacity = 0.7
       }
       function onMouseMove(e) {
         if (!enableAnimation) {
-          return;
+          return
         }
-        const pointerRect = nuxtImg.getBoundingClientRect();
+        const pointerRect = nuxtImg.getBoundingClientRect()
         if (!bodyRect) {
-          bodyRect = body.getBoundingClientRect();
+          bodyRect = body.getBoundingClientRect()
         }
-        const distance = calculateDistance(pointerRect, e.pageX, e.pageY);
-        const size = Math.max((1000 - distance) / 2 / 100, 1);
+        const distance = calculateDistance(pointerRect, e.pageX, e.pageY)
+        const size = Math.max((1000 - distance) / 2 / 100, 1)
 
-        mouseLight.style.top = `${
-          e.clientY - bodyRect.y - mouseLight.clientHeight / 2
-        }px`;
-        mouseLight.style.left = `${e.clientX - mouseLight.clientWidth / 2}px`;
-        mouseLight.style.width = mouseLight.style.height = `${Math.max(
-          Math.round(size * 100),
-          300
-        )}px`;
-        mouseLight.style.filter = `blur(${Math.min(
-          Math.max(size * 50, 100),
-          160
-        )}px)`;
-        mouseLight.style.opacity = Math.min(Math.max(size / 4, 0.6), 1);
+        mouseLight.style.top = `${e.clientY - bodyRect.y - mouseLight.clientHeight / 2}px`
+        mouseLight.style.left = `${e.clientX - mouseLight.clientWidth / 2}px`
+        mouseLight.style.width = mouseLight.style.height = `${Math.max(Math.round(size * 100), 300)}px`
+        mouseLight.style.filter = `blur(${Math.min(Math.max(size * 50, 100), 160)}px)`
+        mouseLight.style.opacity = Math.min(Math.max(size / 4, 0.6), 1)
 
-        const dx = e.pageX - pointerRect.left;
-        const dy = e.pageY - pointerRect.top;
-        const logoGradient = `radial-gradient(circle at ${dx}px ${dy}px, black 75%, transparent 100%)`;
-        nuxtImg.style["-webkit-mask-image"] = logoGradient;
-        nuxtImg.style["mask-image"] = logoGradient;
-        nuxtImg.style.opacity = Math.min(Math.max(size / 4, 0.7), 1);
+        const dx = e.pageX - pointerRect.left
+        const dy = e.pageY - pointerRect.top
+        const logoGradient = `radial-gradient(circle at ${dx}px ${dy}px, black 75%, transparent 100%)`
+        nuxtImg.style['-webkit-mask-image'] = logoGradient
+        nuxtImg.style['mask-image'] = logoGradient
+        nuxtImg.style.opacity = Math.min(Math.max(size / 4, 0.7), 1)
       }
 
       function toggleAnimation(value = !enableAnimation) {
-        enableAnimation = value;
-        document.body.classList.toggle("visual-effects", enableAnimation);
+        enableAnimation = value
+        document.body.classList.toggle('visual-effects', enableAnimation)
         if (value) {
-          onFocusOut();
-          animationToggle.innerText = "Animation Enabled";
-        } else {
-          mouseLight.style.opacity = 0;
-          nuxtImg.style.opacity = 1;
-          nuxtImg.style["mask-image"] = "";
-          nuxtImg.style["-webkit-mask-image"] = "";
-          animationToggle.innerText = "Animation Disabled";
+          onFocusOut()
+          animationToggle.innerText = 'Animation Enabled'
         }
-        localStorage.setItem(ANIMATION_KEY, enableAnimation ? "true" : "false");
+        else {
+          mouseLight.style.opacity = 0
+          nuxtImg.style.opacity = 1
+          nuxtImg.style['mask-image'] = ''
+          nuxtImg.style['-webkit-mask-image'] = ''
+          animationToggle.innerText = 'Animation Disabled'
+        }
+        localStorage.setItem(ANIMATION_KEY, enableAnimation ? 'true' : 'false')
       }
 
-      animationToggle.addEventListener("click", () => toggleAnimation(), {
-        passive: true,
-      });
-      body.addEventListener("mousemove", onMouseMove, { passive: true });
-      body.addEventListener("mouseleave", onFocusOut, { passive: true });
+      animationToggle.addEventListener('click', () => toggleAnimation(), { passive: true})
+      body.addEventListener('mousemove', onMouseMove, { passive: true })
+      body.addEventListener('mouseleave', onFocusOut, { passive: true })
 
-      toggleAnimation(enableAnimation);
+      toggleAnimation(enableAnimation)
 
-      if (typeof window.fetch === "undefined") {
-        setTimeout(() => window.location.reload(), 1000);
+      if (typeof window.fetch === 'undefined') {
+        setTimeout(() => window.location.reload(), 1000)
       } else {
         const check = async () => {
           try {
             const body = await window
               .fetch(window.location.href)
-              .then((r) => r.text());
-            if (!body.includes("__NUXT_LOADING__")) {
-              return window.location.reload();
+              .then(r => r.text())
+            if (!body.includes('__NUXT_LOADING__')) {
+              return window
+                .location
+                .reload()
             }
-          } catch {}
-          setTimeout(check, 1000);
-        };
-        check();
+          } catch  {}
+          setTimeout(check, 1000)
+        }
+        check()
       }
     </script>
   </body>
