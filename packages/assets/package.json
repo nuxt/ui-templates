@@ -1,7 +1,7 @@
 {
   "name": "@nuxt/ui-assets",
   "version": "0.2.0",
-  "repository": "nuxt/ui",
+  "repository": "nuxt/assets",
   "license": "CC-BY-ND-4.0",
   "exports": {
     ".": "./index.mjs",
