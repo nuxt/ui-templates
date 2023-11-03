@@ -16,7 +16,7 @@
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "eslint": "^8.52.0",
     "jiti": "^1.21.0",
-    "lerna": "^6.6.2",
+    "lerna": "^7.4.2",
     "typescript": "^5.2.2",
     "vitest": "^0.34.6"
   },
