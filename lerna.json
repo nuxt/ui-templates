@@ -1,11 +1,7 @@
 {
   "version": "independent",
   "npmClient": "pnpm",
-  "useWorkspaces": true,
   "conventionalCommits": true,
-  "packages": [
-    "packages/*"
-  ],
   "command": {
     "publish": {
       "npmClient": "npm"
