@@ -35,7 +35,7 @@ importers:
   packages/templates:
     devDependencies:
       '@nuxt/ui-assets':
-        specifier: ^0.2.0
+        specifier: ^0.2.1
         version: link:../assets
       '@types/html-minifier':
         specifier: ^4.0.5
