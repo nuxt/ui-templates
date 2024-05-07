@@ -1,3 +1,9 @@
+# 🚧 Repository update 🚧
+
+Nuxt UI Templates have been moved directly into the core repository for Nuxt. You can find them in https://github.com/nuxt/nuxt/tree/main/packages/ui-templates - please raise new issues, discussions and pull requests there 🙏
+
+<hr>
+
 # 🎨 Nuxt Assets
 
 Unified Assets & Templates for [Nuxt](https://github.com/nuxt/nuxt).
