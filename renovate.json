@@ -1,3 +1,4 @@
 {
-  "extends": ["@nuxtjs"]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>nuxt/renovate-config-nuxt"]
 }
